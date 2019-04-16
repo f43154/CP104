@@ -1,8 +1,6 @@
 '''
 Created on 2019 M04 8
 @author: Fani
-ID: 131581470
-Email: hsie1470@mylaurier.ca
 '''
 
 # # # # # TASK 1 # # # # #

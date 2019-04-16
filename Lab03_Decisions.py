@@ -1,8 +1,6 @@
 '''
 Created on 2019 M04 4
 @author: Fani
-ID: 131581470
-Email: hsie1470@mylaurier.ca
 
 Completed in 3 hours
 '''
