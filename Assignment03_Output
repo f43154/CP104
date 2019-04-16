@@ -1,0 +1,48 @@
+
+# # # # # TASK 1 # # # # #
+Balloons collected: 10
+Bonus points earned: 50
+
+Balloons collected: 1
+Bonus points earned: 10
+
+Balloons collected: 0
+Bonus points earned: 0
+
+# # # # # TASK 2 # # # # #
+Lightbulb wattage (w): 25
+Brightness: 215 lumens
+
+Lightbulb wattage (w): 665
+Invalid wattage
+
+# # # # # TASK 3 # # # # #
+Enter Player 1 choice (R, P, or S): S
+Enter Player 2 choice (R, P, or S): S
+A tie!
+
+Enter Player 1 choice (R, P, or S): R
+Enter Player 2 choice (R, P, or S): S
+Rock beats scissors! Player 1 wins.
+
+Enter Player 1 choice (R, P, or S): S
+Enter Player 2 choice (R, P, or S): R
+Rock beats scissors! Player 2 wins.
+
+# # # # # TASK 4 # # # # #
+Enter first colour: red
+Enter second colour: red
+No secondary colour
+
+Enter first colour: red
+Enter second colour: blue
+Secondary colour is purple
+
+Enter first colour: stuff
+Enter second colour: Nonsense
+No secondary colour
+
+# # # # # TASK 5 # # # # #
+Length of call (minutes): 10
+Hour of call (24 hour format): 17
+Total price of call: $0.80

@@ -1,0 +1,91 @@
+Referred to this a lot https://pyformat.info/
+
+# # # # # TASK 1 # # # # #
+'I am Little Astronaut' by Jean Warren
+
+I'm a little astronaut-
+    Flying to the moon     
+        My rocket is ready,    
+        We blast off soon.     
+I climb aboard         
+    And close the hatch.   
+        5-4-3-2-1, off we blast!
+
+# # # # # TASK 2 # # # # #
+'Twinkle Twinkle Little Star' by Jane Taylor
+
+Twinkle, twinkle, little star,
+    How I wonder what you are!
+        Up above the world so high,
+        Like a diamond in the sky.
+Twinkle, twinkle, little star,
+    How I wonder what you are!
+
+# # # # # TASK 3 # # # # #
+Selected quotes from Mark Twain:
+"Do the right thing. It will gratify some people and astonish the rest."
+"All generalizations are false, including this one."
+"It is better to keep your mouth closed and let people think you are a fool
+than to open it and remove all doubt."
+
+# # # # # TASK 4 # # # # #
+A 10 percent discount on 500 is 50.0
+
+# # # # # TASK 5 # # # # #
+The difference between 452 and 38 is 414
+
+# # # # # TASK 6 # # # # #
+Given a cost of 4.67 and a quantity of 5 the total is 23.35
+
+# # # # # TASK 7 # # # # #
+Meal		Cost
+Breakfast	$  6.75
+Lunch		$ 19.34
+Supper		$112.81
+Total		$138.90
+
+# # # # # TASK 8 # # # # #
+Material	Cubic Metres
+Dirt		 55.5
+Gravel		 30.6
+Sand		112.8
+Total		198.9
+
+# # # # # TASK 9 # # # # #
+Clothes		Cost
+Sweatband	$  4.95
+Pants		$ 23.27
+Jacket		$103.21
+Total		$131.43
+
+# # # # # TASK 10 # # # # #
+1990/12/08
+
+# # # # # TASK 11 # # # # #
+left----------------
+-------middle-------
+---------------right
+
+# # # # # TASK 12 # # # # #
+Values
+First:	___100
+Second:	____34
+Third:	___933
+Total:	__1067
+
+# # # # # TASK 13 # # # # #
+Enter the number of seconds: 3681
+There are 1 hours, 1 minutes, and 21 seconds in 3681 seconds
+
+# # # # # TASK 14 # # # # #
+Enter the number of minutes: 3369
+There are 2 days, 8 hours, and 9 minutes in 3369 minutes
+
+# # # # # TASK 15 # # # # #
+654321		 is integer as an integer
+654321.0	 is integer as an float
+654321		 is integer as an string
+654		 is decimal as an integer
+654.32		 is decimal as an float
+654.32		 is decimal as an string
+Hello World	 is phrase as an string

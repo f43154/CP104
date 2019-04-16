@@ -1,0 +1,41 @@
+
+# # # # # TASK 1 # # # # #
+Enter projected annual sales: $30000
+The projected profit on sales of $30,000.00 is $5,400.00.
+
+Enter projected annual sales: $50000
+The projected profit on sales of $50,000.00 is $9,000.00.
+
+Enter projected annual sales: $10
+The projected profit on sales of $10.00 is $1.80.
+
+
+# # # # # TASK 2 # # # # #
+Cost of movie: $10.50
+The cost of the movie for a student is $8.40.
+
+
+# # # # # TASK 3 # # # # #
+Number of large dogs groomed: 10
+Number of small dogs groomed: 10
+Total earned for the day: $1,250.00.
+
+# # # # # TASK 4 # # # # #
+Amount borrowed: $100
+Interest rate: 10
+length of loan (months): 12
+The monthly payment is $8.79.
+
+# # # # # TASK 5 # # # # #
+Diameter of container base (cm): 1
+Height of container (cm): 5
+Cost of materials ($/cm^2): .5
+Number of containers: 100
+The cost of one container is :$8.24
+The total cost of all containers i $824.25
+
+# # # # # TASK 6 # # # # #
+Number of flyers: 10000
+Number of volunteers: 22
+Flyers per volunteer: 454
+Flyers left over: 12
