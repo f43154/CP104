@@ -1,0 +1,269 @@
+
+# # # # # TASK 1 # # # # #
+Guess: 50
+Too high, try again.
+Guess: 20
+Too high, try again.
+Guess: 10
+Too high, try again.
+Guess: 1
+Congratulations - good guess!
+
+# # # # # TASK 2 # # # # #
+For Day 1
+
+How much was breakfast? $7.95
+How much was lunch $15.32
+How much was supper? $42.56
+Your total for the day was $65.83
+
+Were you away another day (Y/N)? Y
+
+
+For Day 2
+
+How much was breakfast? $5.55
+How much was lunch $12.39
+How much was supper? $36.23
+Your total for the day was $54.17
+
+Were you away another day (Y/N)? N
+
+
+Total:
+Breakfast: 	$13.50
+Lunch: 		$27.71
+Supper: 	$78.79
+
+Grand total: 	$120.00
+
+# # # # # TASK 3 # # # # #
+Enter target number: 248
+The nearest power of 2 >= 248 is 256.
+
+# # # # # TASK 4 # # # # #
+Monthly budget: $200
+Enter an expense (0 to quit): $150
+Enter another expense (0 to quit): $23
+Enter another expense (0 to quit): $12
+Enter another expense (0 to quit): $15
+Enter another expense (0 to quit): $37
+Enter another expense (0 to quit): $65
+Enter another expense (0 to quit): $0
+Deficit: $-102.00
+
+# # # # # TASK 5 # # # # #
+Enter budget: $25000
+Expenses for day 1: $1000
+Expenses for day 2: 2000
+Expenses for day 3: 5000
+Expenses for day 4: 6000
+Expenses for day 5: 6000
+Expenses for day 6: 7000
+Expenses for day 7: 1000
+Expenses:	$  28,000.00
+Balance:	$  -3,000.00
+
+# # # # # TASK 6 # # # # #
+First value: 5.0
+Next value: 6
+Next value: 7.5
+Next value: -1
+Next value: 0
+
+Total: 17.50
+Average: 4.38
+
+# # # # # TASK 7 # # # # #
+First value: 5
+Next value: -3.2
+Next value: 7.5
+Next value: 0
+Minimum: -3.2
+
+Maximum: 7.5
+
+# # # # # TASK 8 # # # # #
+First value: 3.2
+Next value: -6.8
+Next value: 23
+Next value: -5.4
+Next value: 0
+
+Number of positive values: 2
+Number of negative values: 2
+
+# # # # # TASK 9 # # # # #
+Starting Celsius temperature: -40
+Ending Celsius temperature: 0
+
+Celsius Fahrenheit
+------------------
+    -40        -40
+    -39        -38
+    -38        -36
+    -37        -34
+    -36        -32
+    -35        -31
+    -34        -29
+    -33        -27
+    -32        -25
+    -31        -23
+    -30        -22
+    -29        -20
+    -28        -18
+    -27        -16
+    -26        -14
+    -25        -13
+    -24        -11
+    -23         -9
+    -22         -7
+    -21         -5
+    -20         -4
+    -19         -2
+    -18          0
+    -17          1
+    -16          3
+    -15          5
+    -14          6
+    -13          8
+    -12         10
+    -11         12
+    -10         14
+     -9         15
+     -8         17
+     -7         19
+     -6         21
+     -5         23
+     -4         24
+     -3         26
+     -2         28
+     -1         30
+      0         32
+
+# # # # # TASK 10 # # # # #
+Starting Fahrenheit temperature: -40
+Ending Fahrenheit temperature: 32
+
+Fahrenheit Celsius
+------------------
+       -40     -40
+       -39     -39
+       -38     -39
+       -37     -38
+       -36     -38
+       -35     -37
+       -34     -37
+       -33     -36
+       -32     -36
+       -31     -35
+       -30     -34
+       -29     -34
+       -28     -33
+       -27     -33
+       -26     -32
+       -25     -32
+       -24     -31
+       -23     -31
+       -22     -30
+       -21     -29
+       -20     -29
+       -19     -28
+       -18     -28
+       -17     -27
+       -16     -27
+       -15     -26
+       -14     -26
+       -13     -25
+       -12     -24
+       -11     -24
+       -10     -23
+        -9     -23
+        -8     -22
+        -7     -22
+        -6     -21
+        -5     -21
+        -4     -20
+        -3     -19
+        -2     -19
+        -1     -18
+         0     -18
+         1     -17
+         2     -17
+         3     -16
+         4     -16
+         5     -15
+         6     -14
+         7     -14
+         8     -13
+         9     -13
+        10     -12
+        11     -12
+        12     -11
+        13     -11
+        14     -10
+        15      -9
+        16      -9
+        17      -8
+        18      -8
+        19      -7
+        20      -7
+        21      -6
+        22      -6
+        23      -5
+        24      -4
+        25      -4
+        26      -3
+        27      -3
+        28      -2
+        29      -2
+        30      -1
+        31      -1
+        32       0
+
+# # # # # TASK 11 # # # # #
+Employee ID: 123
+Hourly wage rate: 45
+Hours worked: 46
+Net payment for employee 123: $2,125.07
+
+Employee ID: 124
+Hourly wage rate: 30
+Hours worked: 46
+Net payment for employee 124: $1,416.71
+
+Employee ID: 0
+---------------------------
+Total payment: 		$ 3,541.78
+Average payment: 	$ 1,770.89
+
+# # # # # TASK 12 # # # # #
+Enter the min value: 3
+Enter the max value: 10
+Enter an integer 3 <= n <= 10: 11
+Bad value!
+Enter again 3 <= n <= 10: -3
+Bad value!
+Enter again 3 <= n <= 10: 5
+You entered: 5
+
+# # # # # TASK 13 # # # # #
+Enter an integer: 5
+5! = 5 * 4 * 3 * 2 * 1 = 120
+
+# # # # # TASK 14 # # # # #
+Enter an integer: 7
+It is a prime number
+
+# # # # # TASK 15 # # # # #
+First value: 1
+Next value: 2
+Next value: -3.4
+Next value: 4
+Next value: 5.3
+Next value: 0
+
+Minimum: -3.40
+Maximum: 5.30
+Total: 8.90
+Average: 1.78

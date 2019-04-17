@@ -1,12 +1,14 @@
 '''
 Created on 2019 M04 5
 @author: Fani
+
+Completed in ~ 4.5 hours
 '''
-'''
+
 # # # # # TASK 1 # # # # #
 print("\n# # # # # TASK 1 # # # # #")
 from random import randint
-number = randint(0, 4)
+number = randint(0, 100)
 guess = int(input("Guess: "))
 
 while guess != number:
@@ -234,7 +236,43 @@ while integer > 0:
     else: 
         print(" ", end="")
 print("= {:,}".format(factorialed))
-'''
+
 # # # # # TASK 14 # # # # #
 print("\n# # # # # TASK 14 # # # # #")
-print("hello world")
+integer = int(input("Enter an integer: "))
+factorialised = integer
+prime = 0
+
+while factorialised > 0:
+    if integer % factorialised == 0:
+        prime += 1
+    factorialised -= 1
+
+if prime == 2:
+    print("It is a prime number")
+else:
+    print("It is not a prime number")
+
+# # # # # TASK 15 # # # # #
+print("\n# # # # # TASK 15 # # # # #")
+value = float(input("First value: "))
+maximum = value
+minimum = value
+count = 0
+total = 0
+
+while value != 0:
+    total += value
+    value = float(input("Next value: "))
+    count += 1
+    
+    if value > maximum:
+        maximum = value
+    elif value < minimum:
+        minimum = value
+
+average = total / count    
+print("\nMinimum: {:.2f}".format(minimum))
+print("Maximum: {:.2f}".format(maximum))
+print("Total: {:.2f}".format(total))
+print("Average: {:.2f}".format(average))
