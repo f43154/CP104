@@ -62,7 +62,7 @@ if leftover > 0:
     print("You have {} candies over Mom's limit.".format(leftover))
 else:
     print("You did not go over Mom's limit")
-'''
+
 # # # # # TASK 4 # # # # #
 print("\n# # # # # TASK 4 # # # # #")
 MIN_SPEND = .90
@@ -77,17 +77,20 @@ print("")
 while total < min_budget and another == "Y":
     cost = float(input("Cost of item: $"))
     total += cost
-    another = input("Buy another item (Y/N): ")
     
-    if total < min_budget:
-        print("Have not yet spend the minimum amount: ${:.2f}".format(min_budget))
-        another = "Y"
-        
     if total > budget:
         total -= cost
+        remaining = budget - total
         print("Item costs too much: ${:.2f} remaining in budget".format(remaining))
+        another = "Y"
     
+    another = input("Buy another item (Y/N): ")
+    
+    if another == "N" and total < min_budget:
+        print("Have not yet spend the minimum amount: ${:.2f}".format(min_budget))
+        another = "Y"  
+
+remaining = budget - total
 print("\nTotal spend on items: ${:.2f}".format(total))
 print("Amount remaining: ${:.2f}".format(remaining))
-print("\nMin budget: ${:.2f}".format(min_budget))
-
+'''
