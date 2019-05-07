@@ -1,0 +1,82 @@
+
+# # # # # TASK 1 # # # # #
+Temperature C (-500 to stop): 32
+Temperature C (-500 to stop): 30
+Temperature C (-500 to stop): -6
+Temperature C (-500 to stop): -500
+
+Cold days: 	1
+Pleasant days: 	0
+Hot days: 	2
+Average: 19 C
+
+# # # # # TASK 2 # # # # #
+Current population: 10000
+Growth Rate (%): 10
+Target Population: 20000
+
+It will take 8 year(s) to reach their target population.
+
+# # # # # TASK 3 # # # # #
+Mom's limit on the number of candies: 100
+Candies from the first household: 20
+Candies from the next household: 30
+Candies from the next household: 52
+
+You gathered 102 candies in total.
+You have 2 candies over Mom's limit.
+
+# # # # # TASK 4 # # # # #
+Party budget: 200
+
+Cost of item: $10.5
+Buy another item (Y/N): N
+Have not yet spend the minimum amount: $180.00
+Cost of item: $35.56
+Buy another item (Y/N): Y
+Cost of item: $112.59
+Buy another item (Y/N): Y
+Cost of item: $125.3
+Item costs too much: $41.35 remaining in budget
+Buy another item (Y/N): Y
+Cost of item: $25.10
+Buy another item (Y/N): N
+
+Total spend on items: $183.75
+Amount remaining: $16.25
+
+# # # # # TASK 5 # # # # #
+Purchase a ticket (Y/N)? Y
+How old are you? 55
+The ticket costs $5.00
+Purchase another ticket (Y/N)? Y
+How old are you? 5
+The ticket costs $2.00
+Purchase another ticket (Y/N)? Y
+How old are you? 11
+Are you a student at this school? (Y/N)? Y
+The ticket costs $1.00
+Purchase another ticket (Y/N)? Y
+How old are you? 13
+Are you a student at this school? (Y/N)? N
+The ticket costs $2.00
+Purchase another ticket (Y/N)? N
+Total tickets price: $10.00
+
+# # # # # TASK 6 # # # # #
+
+   534
++  523
+= 1057
+Congratulations!
+
+Continue (Y/N): Y
+
+   902
++  332
+= 1234
+Congratulations!
+
+Continue (Y/N): N
+
+Your final score is 2/2
