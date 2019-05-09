@@ -1,0 +1,554 @@
+
+# # # # # TASK 1 # # # # #
+Enter n: 99
+The sum of all odd numbers from 1 to 99 is: 2500
+
+# # # # # TASK 2 # # # # #
+Enter n: 99
+The sum of all even numbers from 1 to 99 is: 2450
+
+# # # # # TASK 3 # # # # #
+Enter n: 3
+The sum of the series 1 to 1/3 is: 1.8333333333333333
+
+# # # # # TASK 4 # # # # #
+Enter start: 1
+Enter end: 10
+Enter increment: 3
+Total of 1 to 10 increment 3: 22
+
+# # # # # TASK 5 # # # # #
+Enter the number of values: 4
+First value: 3.5
+Next value: 2.25
+Next value: 6.1
+Next value: 9.3
+
+Minimum: 2.25
+Maximum: 9.30
+Total: 21.15
+Average: 5.29
+
+# # # # # TASK 6 # # # # #
+Enter calories burned per minute: 3.9
+Enter beginning number of minutes: 5
+Enter ending number of minutes: 30
+Enter the increment in minutes: 5
+
+Calories burned after 5 minutes: 19.5
+Calories burned after 10 minutes: 39.0
+Calories burned after 15 minutes: 58.5
+Calories burned after 20 minutes: 78.0
+Calories burned after 25 minutes: 97.5
+Calories burned after 30 minutes: 117.0
+
+# # # # # TASK 7 # # # # #
+Enter number of bottles: 99
+
+99 bottles of beer on the wall, 99 bottles of beer.
+Take one down, pass it around, 98 bottles of beer on the wall.
+
+98 bottles of beer on the wall, 98 bottles of beer.
+Take one down, pass it around, 97 bottles of beer on the wall.
+
+97 bottles of beer on the wall, 97 bottles of beer.
+Take one down, pass it around, 96 bottles of beer on the wall.
+
+96 bottles of beer on the wall, 96 bottles of beer.
+Take one down, pass it around, 95 bottles of beer on the wall.
+
+95 bottles of beer on the wall, 95 bottles of beer.
+Take one down, pass it around, 94 bottles of beer on the wall.
+
+94 bottles of beer on the wall, 94 bottles of beer.
+Take one down, pass it around, 93 bottles of beer on the wall.
+
+93 bottles of beer on the wall, 93 bottles of beer.
+Take one down, pass it around, 92 bottles of beer on the wall.
+
+92 bottles of beer on the wall, 92 bottles of beer.
+Take one down, pass it around, 91 bottles of beer on the wall.
+
+91 bottles of beer on the wall, 91 bottles of beer.
+Take one down, pass it around, 90 bottles of beer on the wall.
+
+90 bottles of beer on the wall, 90 bottles of beer.
+Take one down, pass it around, 89 bottles of beer on the wall.
+
+89 bottles of beer on the wall, 89 bottles of beer.
+Take one down, pass it around, 88 bottles of beer on the wall.
+
+88 bottles of beer on the wall, 88 bottles of beer.
+Take one down, pass it around, 87 bottles of beer on the wall.
+
+87 bottles of beer on the wall, 87 bottles of beer.
+Take one down, pass it around, 86 bottles of beer on the wall.
+
+86 bottles of beer on the wall, 86 bottles of beer.
+Take one down, pass it around, 85 bottles of beer on the wall.
+
+85 bottles of beer on the wall, 85 bottles of beer.
+Take one down, pass it around, 84 bottles of beer on the wall.
+
+84 bottles of beer on the wall, 84 bottles of beer.
+Take one down, pass it around, 83 bottles of beer on the wall.
+
+83 bottles of beer on the wall, 83 bottles of beer.
+Take one down, pass it around, 82 bottles of beer on the wall.
+
+82 bottles of beer on the wall, 82 bottles of beer.
+Take one down, pass it around, 81 bottles of beer on the wall.
+
+81 bottles of beer on the wall, 81 bottles of beer.
+Take one down, pass it around, 80 bottles of beer on the wall.
+
+80 bottles of beer on the wall, 80 bottles of beer.
+Take one down, pass it around, 79 bottles of beer on the wall.
+
+79 bottles of beer on the wall, 79 bottles of beer.
+Take one down, pass it around, 78 bottles of beer on the wall.
+
+78 bottles of beer on the wall, 78 bottles of beer.
+Take one down, pass it around, 77 bottles of beer on the wall.
+
+77 bottles of beer on the wall, 77 bottles of beer.
+Take one down, pass it around, 76 bottles of beer on the wall.
+
+76 bottles of beer on the wall, 76 bottles of beer.
+Take one down, pass it around, 75 bottles of beer on the wall.
+
+75 bottles of beer on the wall, 75 bottles of beer.
+Take one down, pass it around, 74 bottles of beer on the wall.
+
+74 bottles of beer on the wall, 74 bottles of beer.
+Take one down, pass it around, 73 bottles of beer on the wall.
+
+73 bottles of beer on the wall, 73 bottles of beer.
+Take one down, pass it around, 72 bottles of beer on the wall.
+
+72 bottles of beer on the wall, 72 bottles of beer.
+Take one down, pass it around, 71 bottles of beer on the wall.
+
+71 bottles of beer on the wall, 71 bottles of beer.
+Take one down, pass it around, 70 bottles of beer on the wall.
+
+70 bottles of beer on the wall, 70 bottles of beer.
+Take one down, pass it around, 69 bottles of beer on the wall.
+
+69 bottles of beer on the wall, 69 bottles of beer.
+Take one down, pass it around, 68 bottles of beer on the wall.
+
+68 bottles of beer on the wall, 68 bottles of beer.
+Take one down, pass it around, 67 bottles of beer on the wall.
+
+67 bottles of beer on the wall, 67 bottles of beer.
+Take one down, pass it around, 66 bottles of beer on the wall.
+
+66 bottles of beer on the wall, 66 bottles of beer.
+Take one down, pass it around, 65 bottles of beer on the wall.
+
+65 bottles of beer on the wall, 65 bottles of beer.
+Take one down, pass it around, 64 bottles of beer on the wall.
+
+64 bottles of beer on the wall, 64 bottles of beer.
+Take one down, pass it around, 63 bottles of beer on the wall.
+
+63 bottles of beer on the wall, 63 bottles of beer.
+Take one down, pass it around, 62 bottles of beer on the wall.
+
+62 bottles of beer on the wall, 62 bottles of beer.
+Take one down, pass it around, 61 bottles of beer on the wall.
+
+61 bottles of beer on the wall, 61 bottles of beer.
+Take one down, pass it around, 60 bottles of beer on the wall.
+
+60 bottles of beer on the wall, 60 bottles of beer.
+Take one down, pass it around, 59 bottles of beer on the wall.
+
+59 bottles of beer on the wall, 59 bottles of beer.
+Take one down, pass it around, 58 bottles of beer on the wall.
+
+58 bottles of beer on the wall, 58 bottles of beer.
+Take one down, pass it around, 57 bottles of beer on the wall.
+
+57 bottles of beer on the wall, 57 bottles of beer.
+Take one down, pass it around, 56 bottles of beer on the wall.
+
+56 bottles of beer on the wall, 56 bottles of beer.
+Take one down, pass it around, 55 bottles of beer on the wall.
+
+55 bottles of beer on the wall, 55 bottles of beer.
+Take one down, pass it around, 54 bottles of beer on the wall.
+
+54 bottles of beer on the wall, 54 bottles of beer.
+Take one down, pass it around, 53 bottles of beer on the wall.
+
+53 bottles of beer on the wall, 53 bottles of beer.
+Take one down, pass it around, 52 bottles of beer on the wall.
+
+52 bottles of beer on the wall, 52 bottles of beer.
+Take one down, pass it around, 51 bottles of beer on the wall.
+
+51 bottles of beer on the wall, 51 bottles of beer.
+Take one down, pass it around, 50 bottles of beer on the wall.
+
+50 bottles of beer on the wall, 50 bottles of beer.
+Take one down, pass it around, 49 bottles of beer on the wall.
+
+49 bottles of beer on the wall, 49 bottles of beer.
+Take one down, pass it around, 48 bottles of beer on the wall.
+
+48 bottles of beer on the wall, 48 bottles of beer.
+Take one down, pass it around, 47 bottles of beer on the wall.
+
+47 bottles of beer on the wall, 47 bottles of beer.
+Take one down, pass it around, 46 bottles of beer on the wall.
+
+46 bottles of beer on the wall, 46 bottles of beer.
+Take one down, pass it around, 45 bottles of beer on the wall.
+
+45 bottles of beer on the wall, 45 bottles of beer.
+Take one down, pass it around, 44 bottles of beer on the wall.
+
+44 bottles of beer on the wall, 44 bottles of beer.
+Take one down, pass it around, 43 bottles of beer on the wall.
+
+43 bottles of beer on the wall, 43 bottles of beer.
+Take one down, pass it around, 42 bottles of beer on the wall.
+
+42 bottles of beer on the wall, 42 bottles of beer.
+Take one down, pass it around, 41 bottles of beer on the wall.
+
+41 bottles of beer on the wall, 41 bottles of beer.
+Take one down, pass it around, 40 bottles of beer on the wall.
+
+40 bottles of beer on the wall, 40 bottles of beer.
+Take one down, pass it around, 39 bottles of beer on the wall.
+
+39 bottles of beer on the wall, 39 bottles of beer.
+Take one down, pass it around, 38 bottles of beer on the wall.
+
+38 bottles of beer on the wall, 38 bottles of beer.
+Take one down, pass it around, 37 bottles of beer on the wall.
+
+37 bottles of beer on the wall, 37 bottles of beer.
+Take one down, pass it around, 36 bottles of beer on the wall.
+
+36 bottles of beer on the wall, 36 bottles of beer.
+Take one down, pass it around, 35 bottles of beer on the wall.
+
+35 bottles of beer on the wall, 35 bottles of beer.
+Take one down, pass it around, 34 bottles of beer on the wall.
+
+34 bottles of beer on the wall, 34 bottles of beer.
+Take one down, pass it around, 33 bottles of beer on the wall.
+
+33 bottles of beer on the wall, 33 bottles of beer.
+Take one down, pass it around, 32 bottles of beer on the wall.
+
+32 bottles of beer on the wall, 32 bottles of beer.
+Take one down, pass it around, 31 bottles of beer on the wall.
+
+31 bottles of beer on the wall, 31 bottles of beer.
+Take one down, pass it around, 30 bottles of beer on the wall.
+
+30 bottles of beer on the wall, 30 bottles of beer.
+Take one down, pass it around, 29 bottles of beer on the wall.
+
+29 bottles of beer on the wall, 29 bottles of beer.
+Take one down, pass it around, 28 bottles of beer on the wall.
+
+28 bottles of beer on the wall, 28 bottles of beer.
+Take one down, pass it around, 27 bottles of beer on the wall.
+
+27 bottles of beer on the wall, 27 bottles of beer.
+Take one down, pass it around, 26 bottles of beer on the wall.
+
+26 bottles of beer on the wall, 26 bottles of beer.
+Take one down, pass it around, 25 bottles of beer on the wall.
+
+25 bottles of beer on the wall, 25 bottles of beer.
+Take one down, pass it around, 24 bottles of beer on the wall.
+
+24 bottles of beer on the wall, 24 bottles of beer.
+Take one down, pass it around, 23 bottles of beer on the wall.
+
+23 bottles of beer on the wall, 23 bottles of beer.
+Take one down, pass it around, 22 bottles of beer on the wall.
+
+22 bottles of beer on the wall, 22 bottles of beer.
+Take one down, pass it around, 21 bottles of beer on the wall.
+
+21 bottles of beer on the wall, 21 bottles of beer.
+Take one down, pass it around, 20 bottles of beer on the wall.
+
+20 bottles of beer on the wall, 20 bottles of beer.
+Take one down, pass it around, 19 bottles of beer on the wall.
+
+19 bottles of beer on the wall, 19 bottles of beer.
+Take one down, pass it around, 18 bottles of beer on the wall.
+
+18 bottles of beer on the wall, 18 bottles of beer.
+Take one down, pass it around, 17 bottles of beer on the wall.
+
+17 bottles of beer on the wall, 17 bottles of beer.
+Take one down, pass it around, 16 bottles of beer on the wall.
+
+16 bottles of beer on the wall, 16 bottles of beer.
+Take one down, pass it around, 15 bottles of beer on the wall.
+
+15 bottles of beer on the wall, 15 bottles of beer.
+Take one down, pass it around, 14 bottles of beer on the wall.
+
+14 bottles of beer on the wall, 14 bottles of beer.
+Take one down, pass it around, 13 bottles of beer on the wall.
+
+13 bottles of beer on the wall, 13 bottles of beer.
+Take one down, pass it around, 12 bottles of beer on the wall.
+
+12 bottles of beer on the wall, 12 bottles of beer.
+Take one down, pass it around, 11 bottles of beer on the wall.
+
+11 bottles of beer on the wall, 11 bottles of beer.
+Take one down, pass it around, 10 bottles of beer on the wall.
+
+10 bottles of beer on the wall, 10 bottles of beer.
+Take one down, pass it around, 9 bottles of beer on the wall.
+
+9 bottles of beer on the wall, 9 bottles of beer.
+Take one down, pass it around, 8 bottles of beer on the wall.
+
+8 bottles of beer on the wall, 8 bottles of beer.
+Take one down, pass it around, 7 bottles of beer on the wall.
+
+7 bottles of beer on the wall, 7 bottles of beer.
+Take one down, pass it around, 6 bottles of beer on the wall.
+
+6 bottles of beer on the wall, 6 bottles of beer.
+Take one down, pass it around, 5 bottles of beer on the wall.
+
+5 bottles of beer on the wall, 5 bottles of beer.
+Take one down, pass it around, 4 bottles of beer on the wall.
+
+4 bottles of beer on the wall, 4 bottles of beer.
+Take one down, pass it around, 3 bottles of beer on the wall.
+
+3 bottles of beer on the wall, 3 bottles of beer.
+Take one down, pass it around, 2 bottles of beer on the wall.
+
+2 bottles of beer on the wall, 2 bottles of beer.
+Take one down, pass it around, 1 bottles of beer on the wall.
+
+1 bottle of beer on the wall, 1 bottle of beer.
+Take one down, pass it around, no more bottles of beer on the wall!
+
+
+# # # # # TASK 8 # # # # #
+Enter the worker's age: 25
+Enter the worker's salary: 32500
+Enter the yearly raise (%): 1.5
+
+Age         Salary
+------------------
+25       32,500.00
+26       32,987.50
+27       33,482.31
+28       33,984.55
+29       34,494.32
+30       35,011.73
+31       35,536.91
+32       36,069.96
+33       36,611.01
+34       37,160.17
+35       37,717.58
+36       38,283.34
+37       38,857.59
+38       39,440.45
+39       40,032.06
+40       40,632.54
+41       41,242.03
+42       41,860.66
+43       42,488.57
+44       43,125.90
+45       43,772.79
+46       44,429.38
+47       45,095.82
+48       45,772.26
+49       46,458.84
+50       47,155.72
+51       47,863.06
+52       48,581.01
+53       49,309.72
+54       50,049.37
+55       50,800.11
+56       51,562.11
+57       52,335.54
+58       53,120.57
+59       53,917.38
+60       54,726.14
+61       55,547.03
+62       56,380.24
+63       57,225.94
+64       58,084.33
+65       58,955.60
+
+# # # # # TASK 9 # # # # #
+Enter the GIC purchase value: 10000
+Enter the number of years invested: 12
+Enter the GIC interest rate (%): 1.25
+
+Year       Value $
+------------------
+ 0       10,000.00
+ 1       10,125.00
+ 2       10,251.56
+ 3       10,379.71
+ 4       10,509.45
+ 5       10,640.82
+ 6       10,773.83
+ 7       10,908.50
+ 8       11,044.86
+ 9       11,182.92
+10       11,322.71
+11       11,464.24
+12       11,607.55
+
+# # # # # TASK 10 # # # # #
+Enter width of triangle: 6
+     #
+    ##
+   ###
+  ####
+ #####
+######
+ #####
+  ####
+   ###
+    ##
+     #
+
+# # # # # TASK 11 # # # # #
+Enter a number: 8
+       #
+      ###
+     #####
+    #######
+   #########
+  ###########
+ #############
+###############
+
+# # # # # TASK 12 # # # # #
+Enter a number: 8
+#
+##
+# #
+#  #
+#   #
+#    #
+#     #
+########
+
+# # # # # TASK 13 # # # # #
+Number of servers: 3
+Day 1
+Tips for server 1: 4.5
+Tips for server 2: 12.96
+Tips for server 3: 23.45
+Day 2
+Tips for server 1: 15.98
+Tips for server 2: 2
+Tips for server 3: 5.75
+Day 3
+Tips for server 1: 14.67
+Tips for server 2: 32.82
+Tips for server 3: 25
+Day 4
+Tips for server 1: 10
+Tips for server 2: 10
+Tips for server 3: 10
+Day 5
+Tips for server 1: 10
+Tips for server 2: 10
+Tips for server 3: 10
+Day 6
+Tips for server 1: 10
+Tips for server 2: 10
+Tips for server 3: 10
+Day 7
+Tips for server 1: 10
+Tips for server 2: 10
+Tips for server 3: 112.78
+
+Tips per server: $119.97
+
+# # # # # TASK 14 # # # # #
+Number of IAs: 2
+
+Week 1
+Marking hours for IA 1: 2.5
+Marking hours for IA 2: 3
+
+Week 2
+Marking hours for IA 1: 4.25
+Marking hours for IA 2: 1
+
+Week 3
+Marking hours for IA 1: 6
+Marking hours for IA 2: 1
+
+Week 4
+Marking hours for IA 1: 0
+Marking hours for IA 2: 0
+
+Week 5
+Marking hours for IA 1: 0
+Marking hours for IA 2: 0
+
+Week 6
+Marking hours for IA 1: 0
+Marking hours for IA 2: 79.75
+
+Total marking hours for all IAs: 97.50
+
+# # # # # TASK 15 # # # # #
+Enter minimum value of base: 2
+Enter maximum value of base: 10
+Enter increment in base value: 2
+Enter minimum value of height: 2
+Enter maximum value of height: 12
+Enter increment in height value: 2
+
+              Cross-Sectional  Moment of  Section
+Base  Height  Area             Inertia    Modulus
+
+   2  x    2          4.00     1.33     1.33
+   2  x    4          8.00    10.67     5.33
+   2  x    6         12.00    36.00    12.00
+   2  x    8         16.00    85.33    21.33
+   2  x   10         20.00   166.67    33.33
+   2  x   12         24.00   288.00    48.00
+   4  x    2          8.00     2.67     2.67
+   4  x    4         16.00    21.33    10.67
+   4  x    6         24.00    72.00    24.00
+   4  x    8         32.00   170.67    42.67
+   4  x   10         40.00   333.33    66.67
+   4  x   12         48.00   576.00    96.00
+   6  x    2         12.00     4.00     4.00
+   6  x    4         24.00    32.00    16.00
+   6  x    6         36.00   108.00    36.00
+   6  x    8         48.00   256.00    64.00
+   6  x   10         60.00   500.00   100.00
+   6  x   12         72.00   864.00   144.00
+   8  x    2         16.00     5.33     5.33
+   8  x    4         32.00    42.67    21.33
+   8  x    6         48.00   144.00    48.00
+   8  x    8         64.00   341.33    85.33
+   8  x   10         80.00   666.67   133.33
+   8  x   12         96.00  1152.00   192.00
+  10  x    2         20.00     6.67     6.67
+  10  x    4         40.00    53.33    26.67
+  10  x    6         60.00   180.00    60.00
+  10  x    8         80.00   426.67   106.67
+  10  x   10        100.00   833.33   166.67
+  10  x   12        120.00  1440.00   240.00
