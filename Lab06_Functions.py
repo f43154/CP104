@@ -4,6 +4,7 @@ __updated__ = '2019-05-14'
 Author: Fani
 ID: 123456789
 Email: email@mylaurier.ca
+Completed in 2 hours
 '''
 from math import pi
 
