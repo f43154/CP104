@@ -1,10 +1,12 @@
 '''
 Created on 2019 M05 17
-__updated__ = '2019-05-17'
+__updated__ = '2019-05-20'
 Author: Fani
 ID: 123456789
 Email: email@mylaurier.ca
+Completed in ~2 hours
 '''
+
 # # # # # TASK 1 # # # # #
 print("\n# # # # # TASK 1 # # # # #")
 
@@ -170,3 +172,114 @@ def count_special_char(s):
 
 s = input("Enter a string: ")
 count_special_char(s)
+
+# # # # # TASK 10 # # # # #
+print("\n# # # # # TASK 10 # # # # #")
+
+
+def text_analyze(txt):
+    uppr = 0
+    lowr = 0
+    dgts = 0
+    whtspc = 0
+    for i in range(0, len(txt), 1):
+        if txt[i].isupper() == True:
+            uppr += 1
+        if txt[i].islower() == True:
+            lowr += 1
+        if txt[i].isdigit() == True:
+            dgts += 1
+        if txt[i].isspace() == True:
+            whtspc += 1
+    return uppr, lowr, dgts, whtspc
+    
+
+txt = input("Enter a string: ")
+text_analyze(txt)
+print("\nupper case letters: {0[0]}\nlower case letters: {0[1]}\ndigits: {0[2]}\nwhitespace: {0[3]}".format(text_analyze(txt)))
+
+# # # # # TASK 11 # # # # #
+print("\n# # # # # TASK 11 # # # # #")
+
+
+def dsmvwl(s):
+    for i in range(0, len(s), 1):
+        if s[i]in ("a", "e", "i", "o", "u", "A", "E", "I", "O", "U"):
+            print("", end="")
+        else:
+            print("{}".format(s[i]), end="")
+
+
+s = input("Enter a string: ")
+dsmvwl(s)
+
+# # # # # TASK 12 # # # # #
+print("\n# # # # # TASK 12 # # # # #")
+
+
+def comma_period_replace(s):
+    for i in range(0, len(s), 1):
+        if s[i] == ",":
+            print(".", end="")
+        else:
+            print(s[i], end="")
+            
+            
+s = input("Enter a string: ")
+comma_period_replace(s)
+
+# # # # # TASK 13 # # # # #
+print("\n# # # # # TASK 13 # # # # #")
+
+
+def total_digits(s):
+    digits = 0
+    for i in range(0, len(s), 1):
+        if s[i].isdigit() == True:
+            digits += float(s[i])
+    return digits
+
+
+s = input("Enter a string: ")
+print("Digits total: {:.0f}".format(total_digits(s)))
+
+# # # # # TASK 14 # # # # #
+print("\n# # # # # TASK 14 # # # # #")
+
+
+def str_distance(s1, s2):
+    distance = 0
+    if len(s1) == len(s2):
+        for i in range(0, len(s1), 1):
+            if s1[i] != s2[i]:
+                distance += 1
+    else: 
+        distance = -1
+    return distance
+
+
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+print("Distance: {}".format(str_distance(s1, s2)))
+
+# # # # # TASK 15 # # # # #
+print("\n# # # # # TASK 15 # # # # #")
+
+
+def calculate(expr):
+    for i in range(0, len(expr), 1):
+        if expr[i] == "+":
+            result = float(expr[0]) + float(expr[4])
+        if expr[i] == "-":
+            result = float(expr[0]) - float(expr[4])
+        if expr[i] == "*":
+            result = float(expr[0]) * float(expr[4])
+        if expr[i] == "/":
+            result = float(expr[0]) / float(expr[4])
+        if expr[i] == "%":
+            result = float(expr[0]) % float(expr[4])
+    return result       
+
+    
+expr = input("Enter an expression: ")
+print("{} = {:.0f}".format(expr, calculate(expr)))

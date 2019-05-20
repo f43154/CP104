@@ -1,0 +1,69 @@
+
+# # # # # TASK 1 # # # # #
+Enter a chemical formula: NaOH
+NaOH is a hydroxide.
+
+# # # # # TASK 2 # # # # #
+Enter the website address: www.yahoo.com
+business
+
+# # # # # TASK 3 # # # # #
+Enter a product code: BFG9000X7
+Category: 	BFG
+ID:		9000
+Qualifier:	X7
+
+# # # # # TASK 4 # # # # #
+Enter a product code: ab34544Jdt
+Category ab3 is not valid.
+ID 4544 is valid.
+Qualifier Jdt is valid.
+
+# # # # # TASK 5 # # # # #
+Enter a password: 1234
+not long enough
+no upper case
+no lower case
+
+# # # # # TASK 6 # # # # #
+Enter a string: racecar
+racecar is a palindrome
+
+# # # # # TASK 7 # # # # #
+Enter a string: aeiouy
+There are 5 vowels.
+
+# # # # # TASK 8 # # # # #
+Enter a string: I know 1 thing - there are 2 kinds of people.
+There are 2 digits.
+
+# # # # # TASK 9 # # # # #
+Enter a string: It is a beautiful day! We spent $40 today.
+There are 2 special characters.
+
+# # # # # TASK 10 # # # # #
+Enter a string: Python uses whitespace indentation, rather than curly brackets or keywords,t o delimit blocks.
+
+upper case letters: 1
+lower case letters: 78
+digits: 0
+whitespace: 12
+
+# # # # # TASK 11 # # # # #
+Enter a string: I think your book is an utter piece of garbage.
+ thnk yr bk s n ttr pc f grbg.
+# # # # # TASK 12 # # # # #
+Enter a string: Number 1, Number 2, Number 3,
+Number 1. Number 2. Number 3.
+# # # # # TASK 13 # # # # #
+Enter a string: They ate 3 hotdogs, 4 hamburgs, and 12 pieces of pizza.
+Digits total: 10
+
+# # # # # TASK 14 # # # # #
+Enter first string: North
+Enter second string: South
+Distance: 2
+
+# # # # # TASK 15 # # # # #
+Enter an expression: 5 + 4
+5 + 4 = 9
