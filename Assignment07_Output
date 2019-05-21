@@ -1,0 +1,30 @@
+
+# # # # # TASK 1 # # # # #
+Enter a string to test: 1223f
+The string contains non-digits
+
+# # # # # TASK 2 # # # # #
+Enter a string to test: David Brown
+The string contains non-letters
+
+# # # # # TASK 3 # # # # #
+String to search: Gozer
+String to search for: oze
+'oze' is found at location 1 in 'Gozer'
+
+# # # # # TASK 4 # # # # #
+First string: running
+Second string: ruminating
+Common ending: ing
+
+# # # # # TASK 5 # # # # #
+Enter an ISBN: 978-3-16-14841-0
+This is NOT a valid ISBN
+None
+
+# # # # # TASK 6 # # # # #
+Enter phone number: 519-GRT-STOP
+Digits: 519-478-7867
+# # # # # TASK 7 # # # # #
+Enter a string: Bus
+Plural: Buses
