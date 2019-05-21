@@ -9,7 +9,7 @@ Learning problem-solving and structured program design methodologies with Python
 | 4) Repetition - While | [Link](https://github.com/f43154/CP104/blob/master/Lab04_RepetitionWhile.py) | [Link](https://github.com/f43154/CP104/blob/master/Lab04_RepetitionWhile_Testing) | [Link](https://github.com/f43154/CP104/blob/master/Assignment04.py) | [Link](https://github.com/f43154/CP104/blob/master/Assignment04_Output) |
 | 5) Repetition - For | [Link](https://github.com/f43154/CP104/blob/master/Lab05_RepetitionFor.py) | [Link](https://github.com/f43154/CP104/blob/master/Lab05_RepetitionFor_Testing) | [Link](https://github.com/f43154/CP104/blob/master/Assignment05.py) | [Link](https://github.com/f43154/CP104/blob/master/Assignment05_Output) |
 | 6) Functions and Libraries | [Link](https://github.com/f43154/CP104/blob/master/Lab06_Functions.py) | [Link](https://github.com/f43154/CP104/blob/master/Lab06_Functions_Testing) | [Link](https://github.com/f43154/CP104/blob/master/Assignment06.py) | [Link](https://github.com/f43154/CP104/blob/master/Assignment06_Output) |
-| 7) Strings | [Link](https://github.com/f43154/CP104/blob/master/Lab07_Strings.py) | [Link](https://github.com/f43154/CP104/blob/master/Lab07_Strings_Testing) |  |  |
+| 7) Strings | [Link](https://github.com/f43154/CP104/blob/master/Lab07_Strings.py) | [Link](https://github.com/f43154/CP104/blob/master/Lab07_Strings_Testing) | [Link](https://github.com/f43154/CP104/blob/master/Assignment07.py) | [Link](https://github.com/f43154/CP104/blob/master/Assignment07_Output) |
 | 8) Lists |  |  |  |  |
 | 9) Files |  |  |  |  |
 | 10) 2D Lists |  |  |  |  |
