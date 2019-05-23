@@ -1,9 +1,10 @@
 '''
 Created on 2019 M05 22
-__updated__ = '2019-05-22'
+__updated__ = '2019-05-23'
 Author: Fani
 ID: 123456789
 Email: email@mylaurier.ca
+Completed in 3.5+ hours, stuck on Task 13 and 15
 '''
 ''' 
 # # # # # TASK 1 # # # # #
@@ -201,6 +202,154 @@ print("Values: ", a)
 
 v = int(input("\nLinear search for: "))
 print("Index of", v, ":", linear_search(a, v))
-'''
+
 # # '# # # TASK 10 # # # # #
 print("\n# # # # # TASK 10 # # # # #")
+from random import randint
+a = []
+for i in range(10):
+    a.append(randint(-100, 100))
+print("Values: ", a)
+
+
+def min_search(a):
+    smallest = a[0]
+    indexes = []
+    for i in range(len(a)):
+        if a[i] < smallest:
+            smallest = a[i]       
+    for i in range(len(a)):
+        if a[i] == smallest:
+            indexes.append(i)
+    return indexes
+
+
+print("Indexes of minimums:", min_search(a))
+
+# # '# # # TASK 11 # # # # #
+print("\n# # # # # TASK 11 # # # # #")
+from random import randint
+source1 = []
+source2 = []
+for i in range(5):
+    source1.append(randint(-5, 5))
+    source2.append(randint(-5, 5))
+print("Values: ", source1)
+print("Values: ", source2)
+
+
+def dot_product(source1, source2):
+    target = []
+    total = 0
+    for i in range(len(source1)):
+        target.append(source1[i] * source2[i])
+    for i in range(len(target)):
+        total += target[i]
+    return total
+
+
+print("\nDot product:", dot_product(source1, source2))
+
+# # '# # # TASK 12 # # # # #
+print("\n# # # # # TASK 12 # # # # #")
+from random import randint
+source1 = []
+source2 = []
+for i in range(5):
+    source1.append(randint(-5, 5))
+    source2.append(randint(-5, 5))
+print("Values: ", source1)
+print("Values: ", source2)
+
+
+def dot_product(source1, source2):
+    target = []
+    for i in range(len(source1)):
+        target.append(source1[i] + source2[i])
+    return target
+
+
+print("\nTotals:", dot_product(source1, source2))
+
+# # '# # # TASK 13 # # # # #
+print("\n# # # # # TASK 13 # # # # #")
+from random import randint
+source1 = []
+source2 = []
+for i in range(5):
+    source1.append(randint(-5, 5))
+    source2.append(randint(-5, 5))
+print("Values: ", source1)
+print("Values: ", source2)
+
+
+def union(source1, source2):
+    target = []
+    united = []
+    for i in range(len(source1)):
+        target.append(source1[i])
+    for i in range(len(source2)):
+        target.append(source2[i])
+        
+    for x in target:        
+        if x not in united:
+            united.append(x)
+    
+    return united
+
+
+print("Union:", union(source1, source2))
+
+# # '# # # TASK 14 # # # # #
+print("\n# # # # # TASK 14 # # # # #")
+from random import randint
+source1 = []
+source2 = []
+for i in range(randint(1, 10)):
+    source1.append(randint(-5, 5))
+for i in range(randint(1, 10)):
+    source2.append(randint(-5, 5))
+print("Values 1:", source1)
+print("Values 2:", source2)
+
+
+def intersection(source1, source2):
+    intersection = []
+    for i in range(len(source1)):
+        for j in range(len(source2)):
+            if source1[i] == source2[j]:
+                intersection.append(source1[i])
+    return intersection
+
+
+print("\nIntersection:", intersection(source1, source2))
+'''
+# # '# # # TASK 15 # # # # #
+print("\n# # # # # TASK 15 # # # # #")
+from random import randint
+source1 = []
+source2 = []
+for i in range(randint(1, 10)):
+    source1.append(randint(-5, 5))
+for i in range(randint(1, 10)):
+    source2.append(randint(-5, 5))
+print("Values 1:", source1)
+print("Values 2:", source2)
+
+
+def symmetric_difference(source1, source2):
+    difference = []
+    biglist = []
+    for i in range(len(source1)):
+        biglist.append(source1[i])
+    for i in range(len(source2)):
+        biglist.append(source2[i])
+        
+    for i in range(len(source1)):
+        for j in range(len(biglist)):
+            if source1[i] != biglist[j]:
+                difference.append(source1[i])
+    return difference
+
+        
+print(symmetric_difference(source1, source2))
