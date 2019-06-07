@@ -1,0 +1,115 @@
+
+# # # # # TASK 1 # # # # #
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+
+# # # # # TASK 2 # # # # #
+
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+
+# # # # # TASK 3 # # # # #
+zero
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+
+# # # # # TASK 4 # # # # #
+Number of values: 10
+Low value: -10
+High value: 10
+Values:  [-8, 5, -5, -4, 9, 8, -2, -5, -3, -4]
+
+# # # # # TASK 5 # # # # #
+Number of values: 6
+Low value: 1
+High value: 49
+Lotto Numbers:  [25, 41, 37, 14, 7, 13]
+
+# # # # # TASK 6 # # # # #
+Number of values: 10
+Low value: -79
+High value: 96
+Values:  [93, 59, -74, -51, 62, 35, -54, 19, -11, -41]
+Smallest value: -74
+Largest value: 93
+Total: 37.0
+Average: 3.7
+
+# # # # # TASK 7 # # # # #
+Number of values: 10
+Low value: -100
+High value: 100
+Values:  [11, 23, -19, 44, -42, -14, 71, -71, -47, 53]
+Negatives: 5
+Positives: 5
+Zeroes: 0
+Evens: 3
+Odds: 7
+
+# # # # # TASK 8 # # # # #
+Values:  [79, -90, -25, 50, -81, -44, 14, 99, -12, 51]
+
+Linear search for: -12
+Index of -12 : 8
+
+# # # # # TASK 9 # # # # #
+Values:  [-7, -98, 33, 94, 18, -45, -79, 98, 38, 61]
+
+Linear search for: 94
+Index of 94 : [3]
+
+# # # # # TASK 10 # # # # #
+Values:  [42, 39, -8, 55, -32, -8, -45, -80, 1, -100]
+Indexes of minimums: [9]
+
+# # # # # TASK 11 # # # # #
+Values:  [-1, -3, -1, 4, -1]
+Values:  [-3, 1, -2, 3, -3]
+
+Dot product: 17
+
+# # # # # TASK 12 # # # # #
+Values:  [4, 5, 5, 5, 4]
+Values:  [-5, -1, 2, 2, 0]
+
+Totals: [-1, 4, 7, 7, 4]
+
+# # # # # TASK 13 # # # # #
+Values 1:  [2]
+Values 2:  [2, 2, 0, 2, 1, -1]
+
+Unique: [2, 0, 1, -1]
+
+# # # # # TASK 14 # # # # #
+Values 1: [-1, -5, -5, 3, 4, 3, 0]
+Values 2: [-1, -3, -2, 0]
+
+Intersection: [-1, 0]
+
+# # # # # TASK 15 # # # # #
+Values 1:  [1]
+Values 2:  [-3, 2, 1]
+
+Difference: [-3, 2]

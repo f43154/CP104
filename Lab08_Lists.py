@@ -4,9 +4,9 @@ __updated__ = '2019-05-23'
 Author: Fani
 ID: 123456789
 Email: email@mylaurier.ca
-Completed in 3.5+ hours, stuck on Task 13 and 15
+Completed in 7.5 hours, stuck on Task 13 and 15 for the longest time
 '''
-''' 
+
 # # # # # TASK 1 # # # # #
 print("\n# # # # # TASK 1 # # # # #")
 DAYS_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -273,32 +273,26 @@ print("\nTotals:", dot_product(source1, source2))
 
 # # '# # # TASK 13 # # # # #
 print("\n# # # # # TASK 13 # # # # #")
+
 from random import randint
 source1 = []
 source2 = []
-for i in range(5):
-    source1.append(randint(-5, 5))
-    source2.append(randint(-5, 5))
-print("Values: ", source1)
-print("Values: ", source2)
+for i in range(randint(1, 10)):
+    source1.append(randint(-1, 2))
+for i in range(randint(1, 10)):
+    source2.append(randint(-1, 2))
+print("Values 1: ", source1)
+print("Values 2: ", source2)
 
+combined = source1 + source2
+unique = []
 
-def union(source1, source2):
-    target = []
-    united = []
-    for i in range(len(source1)):
-        target.append(source1[i])
-    for i in range(len(source2)):
-        target.append(source2[i])
-        
-    for x in target:        
-        if x not in united:
-            united.append(x)
-    
-    return united
+for i in range(len(combined)):
+    if combined[i] not in unique:
+        unique.append(combined[i])
 
+print("\nUnique: {}".format(unique))
 
-print("Union:", union(source1, source2))
 
 # # '# # # TASK 14 # # # # #
 print("\n# # # # # TASK 14 # # # # #")
@@ -323,33 +317,33 @@ def intersection(source1, source2):
 
 
 print("\nIntersection:", intersection(source1, source2))
-'''
+
 # # '# # # TASK 15 # # # # #
 print("\n# # # # # TASK 15 # # # # #")
+
 from random import randint
 source1 = []
 source2 = []
-for i in range(randint(1, 10)):
-    source1.append(randint(-5, 5))
-for i in range(randint(1, 10)):
-    source2.append(randint(-5, 5))
-print("Values 1:", source1)
-print("Values 2:", source2)
+for i in range(randint(1, 8)):
+    source1.append(randint(-3, 3))
+for i in range(randint(1, 8)):
+    source2.append(randint(-3, 3))
+print("Values 1: ", source1)
+print("Values 2: ", source2)
 
+combined = source1 + source2
+duplicates = []
+unique = []
 
-def symmetric_difference(source1, source2):
-    difference = []
-    biglist = []
-    for i in range(len(source1)):
-        biglist.append(source1[i])
-    for i in range(len(source2)):
-        biglist.append(source2[i])
-        
-    for i in range(len(source1)):
-        for j in range(len(biglist)):
-            if source1[i] != biglist[j]:
-                difference.append(source1[i])
-    return difference
+for i in range(0, len(combined), 1):
+    for j in range(0, len(combined), 1):
+        if i != j:
+            if combined[i] == combined[j]:
+                duplicates.append(combined[i])
 
-        
-print(symmetric_difference(source1, source2))
+for i in range(0, len(combined), 1):
+    if combined[i] not in duplicates:
+        unique.append(combined[i])
+
+print("\nDifference: {}".format(unique))
+    
