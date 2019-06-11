@@ -49,16 +49,37 @@ print("\n# # # # # TASK 3 # # # # #")
 
 
 def two_element_subset(string):
-    i = 0
-    while i < len(string):
+    subset = []
+    for i in range(0, len(string), 1):
         j = i + 1
-        subsets = string[i] + string[j]
-        i += 1
-    print(subsets)
+        while j < len(string):
+            subset.append(string[i] + string[j])
+            j += 1
+    print("Subsets: ", subset)
 
     
 string = input("String: ")
 two_element_subset(string)
 '''
-string = "AECG"
-print(string[1])
+# # # # # TASK 4 # # # # #
+from random import randint
+
+print("\n# # # # # TASK 4 # # # # #")
+
+subjects = ["David", "Tasmin", "Tristan", "Lori", "Kate", "Li-Meng"]
+print(subjects)
+
+for i in range(0, len(subjects), 1):
+    drugs = []
+    placebos = []
+    random = randint(0, 1)
+    if random == 1:
+        drugs.append(subjects[i])
+        print("Drugs", drugs)
+    else:
+        placebos.append(subjects[i])
+        print("Placebos ", placebos)
+
+print("\n")
+print("Placebos: {}".format(placebos))
+print("Drugs: {}".format(drugs))
