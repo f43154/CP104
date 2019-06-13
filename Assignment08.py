@@ -60,26 +60,75 @@ def two_element_subset(string):
     
 string = input("String: ")
 two_element_subset(string)
-'''
-# # # # # TASK 4 # # # # #
-from random import randint
 
+# # # # # TASK 4 # # # # #
 print("\n# # # # # TASK 4 # # # # #")
 
+from random import randint
+
+
+def set_trials(subjects):
+    for i in range(0, len(subjects), 1):
+        random = randint(0, 1)
+        if random == 1:
+            drugs.append(subjects[i])
+        else:
+            placebos.append(subjects[i])
+    
+    if len(subjects) % 2 == 0:
+        while len(drugs) != len(placebos):        
+            if len(drugs) > len(placebos):
+                placebos.append(drugs[len(drugs) - 1])
+                drugs.pop()
+            elif len(drugs) < len(placebos):
+                drugs.append(placebos[len(placebos) - 1])
+                placebos.pop()
+    
+    if len(subjects) % 2 == 1:
+        while (len(drugs) - 1) != len(placebos):
+            if len(drugs) > len(placebos):
+                placebos.append(drugs[len(drugs) - 1])
+                drugs.pop()
+            elif len(drugs) < len(placebos):
+                drugs.append(placebos[len(placebos) - 1])
+                placebos.pop()        
+
+
 subjects = ["David", "Tasmin", "Tristan", "Lori", "Kate", "Li-Meng"]
-print(subjects)
+drugs = []
+placebos = []
+print("Subjects:\t", subjects)
+set_trials(subjects)
+print("Drug trial: \t", drugs)
+print("Placebo trial:\t", placebos)
 
-for i in range(0, len(subjects), 1):
-    drugs = []
-    placebos = []
-    random = randint(0, 1)
-    if random == 1:
-        drugs.append(subjects[i])
-        print("Drugs", drugs)
-    else:
-        placebos.append(subjects[i])
-        print("Placebos ", placebos)
+# # # # # TASK 5 # # # # #
+print("\n# # # # # TASK 5 # # # # #")
 
-print("\n")
-print("Placebos: {}".format(placebos))
-print("Drugs: {}".format(drugs))
+
+def license_test(correct_answers, student_answers):    
+    correct = 0
+    incorrect = 0
+    indexes = []
+    for i in range(0, len(correct_answers), 1):
+        if correct_answers[i] == student_answers[i]:
+            correct += 1
+        else:
+            incorrect += 1
+            indexes.append(i)
+    print("Correct Answers Count: ", correct)
+    print("Incorrect Answers Count: ", incorrect)
+    print("Indexes of incorrect answers: ", indexes)
+
+
+from random import choices
+correct_answers = choices(range(3), k=5)
+student_answers = choices(range(3), k=5)
+print("Correct Answers: ", correct_answers)
+print("Student Answers: ", student_answers)
+license_test(correct_answers, student_answers)
+
+'''
+# # # # # TASK 6 # # # # #
+print("\n# # # # # TASK 6 # # # # #")
+
