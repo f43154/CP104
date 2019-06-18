@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html lang="en-ca">
+<head>
+    <title>CP104: Assignment 10 - Fall 2018</title>
+    <meta charset="utf-8">
+    <link href="/physcomp/physcomp.css"
+          rel="stylesheet"
+          type="text/css">
+    <meta content="David Brown"
+          name="author">
+    <script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+          type="text/javascript">
+</script>
+</head>
+
+<body>
+    <header>
+  <div class="navTop">
+    <nav>
+      <a href="/cp104">CP104: Home</a>
+      <a href="https://students.wlu.ca/programs/science/physics-and-computer-science/">Physics &amp; Computer Science</a>
+      <a href="http://students.wlu.ca">Students</a>
+      <a href="http://www.wlu.ca">wlu.ca</a>
+      </nav>
+  </div>    </header>
+
+    <main>
+        <section class="title">
+            <h1>CP104: Assignment 10 - Fall 2018</h1>
+<p class="version"><time>2018-11-23 03:11</time></p>
+<h3>Due 11:30 am, Friday, December 7, 2018 </h3>
+        </section>
+  <hr>
+
+  <h2>Instructions</h2>
+
+  <p>When writing and submitting your assignments follow these requirements:</p>
+
+  <ul>
+    <li>
+      <p>Name your Eclipse project with your WLU Network login, an underscore, 'a' (for 'assignment',
+      then the assignment number: <code><em>login</em>_e<em>n</em>.zip</code>. For example, if the
+      user <code>barn4520</code> submits Assignment 1, the name should be:
+      <code>barn4520_a1</code>. Give your .zip file the same name when exporting your project. Use
+      only Eclipse's built-in archive capability to create these .zip files. No other format is
+      accepted.</p>
+    </li>
+
+    <li>
+      <p>Use the documentation style given in the <a href="/cp104/labs/lab01_introduction.php">CP104
+      Introduction</a> lab. Make sure you put your name, ID, and email address in all files
+      that you submit.</p>
+    </li>
+    <li>
+      <p>Use proper output formatting on all output, as shown in the <a href=
+      "/cp104/labs/lab02_output.php">CP104: Formatted Output</a> lab.</p>
+    </li>
+    <li>
+      <p>Test your programs thoroughly - show us how it works. Copy the outputs from your testing
+      to a file in your Eclipse/Pydev project named <code>testing.txt</code>. Make sure the tests
+      are well labelled so that the markers know which program the results represent.</p>
+    </li>
+
+    <li>
+      <p>If you are asked to provide discussion put this discussion in your Eclipse/Pydev project
+      in a file named <code>testing.txt</code>.</p>
+    </li>
+
+    <li>
+      <p>Put all your programs, testing, and discussion files into one Eclipse/Pydev project.</p>
+    </li>
+
+    <li>
+      <p>Zip the entire project using Eclipse and submit the resulting .zip file through
+      MyLearningSpace.</p>
+    </li>
+
+    <li>Use the <a href="https://bohr.wlu.ca/cp104/validate/">Validate Assignment</a> link to
+    make sure that your project and .zip file are named correctly have have the proper contents.
+    Improper assignment submissions are given a grade of zero.</li>
+  </ul>
+
+  <p>Marks are deducted from any questions where these requirements are not met.</p>
+
+  <p>You may use any code or libraries provided as a solution to previous labs or assignments if
+  your own code or libraries are incomplete or incorrect.</p>
+  <hr>
+
+		<h3>This assignment is optional. You are not required to complete and hand in this 
+		assignment unless you wish to. Of the 10 assignments, the lowest grade will be dropped.</h3>
+
+        <h2 id="Tasks">Tasks</h2>
+
+        <h3>Note: Be sure to name your project and .zip file correctly. Using the wrong names may
+        give you a grade of zero! Check your assignment zip files with <a href=
+        "/cp104/validate/">CP104 Assignment Validator</a>.</h3>
+
+        <p>You must use formatted printing as taught in <a href="/cp104/labs/lab02_output.php">Lab
+        2: Formatted Output</a>.</p>
+
+        <p>Input for sample code is <u>underlined</u>, as in this example:</p>
+        <pre class="example">
+Enter projected annual sales: $<u>30000</u>
+</pre>
+
+        <p>Provide complete testing: i.e. test <u>all</u> decision/execution paths.</p>
+
+        <p>Put all functions into a common Pydev library module named <code>functions.py</code>.
+        Test these functions by calling them from separate Pydev modules.</p>
+		
+		<h3>Note: None of these functions ask for input from the user or print results.</h3>
+
+        <ol>
+            <li>
+                <p>Implement the following function in the PyDev module <code>functions.py</code>
+                and test it from a PyDev module named <code class="tasks"></code>:</p>
+
+                <pre class="syntax">
+def binary_search(values, key):
+    """
+    -------------------------------------------------------
+    Searches for the first occurrence of key in the sorted list
+    values. Returns -1 if key is not found.
+    Use: i = binary_search(values, key)
+    -------------------------------------------------------
+    Parameters:
+        values - a list of data (sorted list of ?)
+        key - a data element (?)
+    Returns:
+        i - the index of the first occurrence of key in
+            the list, -1 if key is not found. (int)
+    -------------------------------------------------------
+    """
+</pre>
+
+				<p>A binary search is a highly efficient search used with sorted data. The algorithm
+				is:</p>
+				
+				<ul>
+				<li>start searching for the key value at the middle index of the list</li>
+				<li>if the key is greater than the middle value, search for key in the right sub-list (values from the middle index to the end</li>
+				<li>if the key is less than or equal to the middle value, search for the key in the left sub-list (values from index 0 to
+				the middle index</li>
+				<li>repeat while making the sub-lists smaller and smaller until you run out of sub-lists to search</li>
+				</ul>
+
+				<p>What makes this search efficient is that each step in the search eliminates half of the remaining list and so
+				reduces the number of comparisons to make much more quickly than a linear search. Doubling the size of a list doubles
+				the number of potential comparisons in a linear search - doubling the size of a list adds a single comparison to
+				a binary search.</p>
+
+                <p>Sample testing:</p>
+                <pre class="example">
+Search: [2, 5, 5, 5, 5, 5, 5, 8] for 5
+Index: 1
+</pre>
+
+                <hr>
+            </li>
+
+            <li>
+                <p>Implement the following function in the PyDev module <code>functions.py</code>
+                and test it from a PyDev module named <code class="tasks"></code>:</p>
+
+                <pre class="syntax">
+def flatten(values):
+    """
+    -------------------------------------------------------
+    Flattens a 2D list. Creates a new 1D list from values.
+    Use: flattened = flatten(values)
+    -------------------------------------------------------
+    Parameters:
+        values - a 2D list of data (list of list of ?)
+    Returns:
+        flattened - a 1D list of flattened values (list ?)
+    -------------------------------------------------------
+    """
+</pre>
+
+
+                <p>Sample testing:</p>
+                <pre class="example">
+Original:  [[0, 1], [2, 3]]
+Flattened: [0, 1, 2, 3]
+</pre>
+				  <pre class="example">
+Original:  [[7.11, 6.07, 1.94], [9.35, 6.76, 5.66], [8.07, 7.3, 5.65], [3.84, 3.83, 8.46]]
+Flattened: [7.11, 6.07, 1.94, 9.35, 6.76, 5.66, 8.07, 7.3, 5.65, 3.84, 3.83, 8.46]
+</pre>
+
+                <hr>
+            </li>
+
+            <li>
+                <p>Implement the following function in the PyDev module <code>functions.py</code>
+                and test it from a PyDev module named <code class="tasks"></code>:</p>
+                <pre class="syntax">
+def matrix_multiply(a, b):
+    """
+    -------------------------------------------------------
+    Multiplies a by b. Matrices are multiplied by taking the dot product
+    of the rows of a against the columns of b.
+    Rows of a == columns of b, columns of a == rows of b.
+    See: https://en.wikipedia.org/wiki/Matrix_multiplication
+    Use: c = matrix_multiply(a, b)
+    -------------------------------------------------------
+    Parameters:
+        a - the matrix to multiply (2D list of int/float)
+        b - the matrix to multiply by (2D list of int/float)
+    Returns:
+        c - the resulting matrix of a times b
+            (2D list of int/float)
+    ------------------------------------------------------
+    """
+</pre>
+
+			 					<p>See also: <a href="https://www.mathsisfun.com/algebra/matrix-multiplying.html">How
+								to Multiply Matrices</a></p>
+                <p>Sample testing:</p>
+                <pre class="example">
+Matrix a:
+        0      1      2
+ 0      4      5      4
+ 1      5      2      2
+
+Matrix b:
+        0      1
+ 0      5      3
+ 1      0      2
+ 2      1      5
+
+Matrix c:
+        0      1
+ 0     24     42
+ 1     27     29
+
+-----------------------------
+Transposed matrices:
+
+Matrix a:
+        0      1
+ 0      4      5
+ 1      5      2
+ 2      4      2
+
+Matrix b:
+        0      1      2
+ 0      5      0      1
+ 1      3      2      5
+
+Matrix c:
+        0      1      2
+ 0     35     10     29
+ 1     31      4     15
+ 2     26      4     14
+</pre>
+                <hr>
+            </li>
+
+            <li>
+                <p>Implement the following function in the PyDev module <code>functions.py</code>
+                and test it from a PyDev module named <code class="tasks"></code>:</p>
+
+                <pre class="syntax">
+def pig_latin(word):
+    """
+    -------------------------------------------------------
+    Converts a word to Pig Latin. The conversion is:
+    - if a word begins with a vowel, add "way" to the end of the word.
+    - if the word begins with consonants, move all consonants to the
+    end of the word and add "ay" to the end of that.
+    "y" is treated as a consonant if it is the first character in the word,
+    and as a vowel for anywhere else in the word.
+    Preserve the case of the word - i.e. if the first character of word
+    is upper-case, then the new first character should also be upper case.
+    Use: pl = pig_latin(word)
+    -------------------------------------------------------
+    Parameters:
+        word - a string to convert to Pig Latin (str)
+    Returns:
+        pl - the Pig Latin version of word (str)
+    ------------------------------------------------------
+    """
+</pre>
+
+
+                <p>Sample testing:</p>
+                <pre class="example">
+Word:      bagel
+Pig Latin: agelbay
+
+Word:      yellow
+Pig Latin: ellowyay
+
+Word:      type
+Pig Latin: ypetay
+
+Word:      smile
+Pig Latin: ilesmay
+
+Word:      stupid
+Pig Latin: upidstay
+
+Word:      I
+Pig Latin: Iway
+
+Word:      Big
+Pig Latin: Igbay
+
+Word:      floor
+Pig Latin: oorflay
+
+Word:      Scram
+Pig Latin: Amscray
+
+Word:      yes
+Pig Latin: esyay
+</pre>
+
+                <hr>
+            </li>
+
+            <li>
+				<p>This question uses data about various cereals stored in the file
+				<a href="cereals.txt" download="cereals.txt">cereals.txt</a>. A description
+				of the data in this file is given in the file <a href="cereal_data.txt"
+				download="cereal_data.py">cereal_data.py</a>. Copy these files into your
+				Assignment 10 project <code>src</code> folder. Write the following functions
+				based upon the information in <i>cereal_data.py</i> and the data in
+				<i>cereals.txt</i>.</p>
+
+				<p>You may import the constants from <i>cereal_data.py</i> into your <i>functions.py</i>
+				and/or <i>t05.py</i> modules with syntax like:</p>
+				
+                <pre class="example">
+from cereal_data import MFRS, COLUMNS, ...
+</pre>
+			
+                <p>Implement the following functions in the PyDev module <code>functions.py</code>
+                and test them from a PyDev module named <code class="tasks"></code>:</p>
+
+                <pre class="syntax">
+def read_cereals(fh):
+    """
+    -------------------------------------------------------
+    Reads cereal data from a file into a 2D list of cereal data.
+    See: cereal_data.py for column names and information.
+    'shelf' and 'vitamin' columns must be converted to int.
+    'calories' through 'cups' columns must be converted to float.
+    Use: cereals = read_cereals(fh)
+    -------------------------------------------------------
+    Parameters:
+        fh - file handle for cereal data (file - open for reading)
+    Returns:
+        cereals - a 2D list of cereal data (list of ?)
+    ------------------------------------------------------
+    """
+</pre>
+
+				<p>This function should return a 2D list whose individual rows look like:</p>
+				
+                <pre class="example">
+['Oatmeal Raisin Crisp', 'G', 'C', 3, 25, 130.0, 3.0, 2.0, 170.0, 1.5, 13.5, 10.0, 120.0, 1.25, 0.5]
+</pre>
+
+                <pre class="syntax">
+def cereals_by_value(cereals, column, value):
+    """
+    -------------------------------------------------------
+    Returns the rows of cereals where column value == value.
+    Use: data = cereals_by_value(cereals, column, value)
+    -------------------------------------------------------
+    Parameters:
+        cereals - a 2D list of cereal data (list of ?)
+        column - a column name (str)
+        value - the value of column in a row (str)
+    Returns:
+        some_cereals - a 2D list of cereal data (list of ?)
+    ------------------------------------------------------
+    """
+</pre>
+                <p>Sample results:</p>
+                <pre class="syntax">
+Column: 'type'
+Value: 'H'
+
+['Cream of Wheat (Quick)', 'N', 'H', 2, 0, 100.0, 3.0, 0.0, 80.0, 1.0, 21.0, 0.0, 0.0, 1.0, 1.0]
+['Maypo', 'A', 'H', 2, 25, 100.0, 4.0, 1.0, 0.0, 0.0, 16.0, 3.0, 95.0, 1.0, 1.0]
+['Quaker Oatmeal', 'Q', 'H', 1, 0, 100.0, 5.0, 2.0, 0.0, 2.7, 14.0, 6.0, 110.0, 1.0, 0.67]
+</pre>
+					<p>&nbsp;</p>
+                <pre class="syntax">
+def cereal_stats(cereals, columns):
+    """
+    -------------------------------------------------------
+    Calculates and returns the minimum, maximum, count, total, and
+    average of the values in each column of columns.
+    Use: data = cereal_stats(cereals, columns)
+    -------------------------------------------------------
+    Parameters:
+        cereals - a 2D list of cereal data (list of ?)
+        columns - a list of column names (list of str)
+    Returns:
+        data - a dictionary of stats values in the form
+            {column: [minimum, maximum, count, total, average]}
+            (dict of string: list of int/float)
+    ------------------------------------------------------
+    """
+</pre>
+
+                <p>Sample testing:</p>
+                <pre class="example">
+Columns: ['calories', 'protein', 'sugar']
+
+Raw data:
+{'calories': [100.0, 100.0, 3, 300.0, 100.0], 'protein': [3.0, 5.0, 3, 12.0, 4.0], 'sugar': [0.0, 6.0, 3, 9.0, 3.0]}
+</pre>
+
+                <pre class="syntax">
+def cereal_stats_table(data):
+    """
+    -------------------------------------------------------
+    Prints the values in stats_data in a tabular format. Titles are:
+        Column      Minimum  Maximum    Count    Total  Average
+        ---------- -------- -------- -------- -------- --------
+    float values are printed with 1 decimal point.
+    Use: cereal_stats_table(data)
+    -------------------------------------------------------
+    Parameters:
+        stats_data - a dictionary of stats values in the form
+            {column: [minimum, maximum, count, total, average]}
+            (dict of string: list of int/float)
+    Returns:
+        None
+    ------------------------------------------------------
+    """
+</pre>
+
+                <p>Sample testing:</p>
+				  <pre class="example">
+Column      Minimum  Maximum    Count    Total  Average
+---------- -------- -------- -------- -------- --------
+calories      100.0    100.0        3    300.0    100.0
+protein         3.0      5.0        3     12.0      4.0
+sugar           0.0      6.0        3      9.0      3.0
+</pre>
+
+                <hr>
+            </li>
+
+            <li>			
+				<p>A bitmap image file (<code>.bmp</code>) consists of a header with information about
+				the size and type of the image, followed by a series of bytes that contain a pixel by
+				pixel representation of the image. Each pixel is represented by three bytes that contain
+				the level of red, green, and blue colours in the pixel. These values range from
+				[0, 0, 0] (black) to [255, 255, 255] (white) for a total of 16,777,216 different colours.</p>
+				
+				<p>A grayscale image is an image in which all of the pixels consist of various shades of
+				gray. In a gray pixel the red, green, and blue levels are the same, for a total of 256
+				different shades of gray. To convert a colour image to grayscale, each pixel
+				in the image must be changed from a colour pixel (where red, blue and
+				green values are different) to a gray pixel (where red = green = blue).
+				Equations to convert a colour pixel to a gray pixel are not unique. We
+				will use a weighted conversion equation: gray = 0.06 &times; red + 0.6 &times;
+				green + 0.33 &times; blue.</p>
+				<p>For example, if we had a shade of green [153,255,0] where red = 153, green =
+				255, blue = 0,
+				<br />then gray = 0.06 &times; 153 + 0.6 &times; 255 + 0.33 &times; 0 = 162.18
+				<br />and the gray pixel would be [162,162,162] red = 162, green = 162, blue =
+				162.</p>
+				
+				<p>To read a bitmap file you must first extract the size of the file header from the
+				header at the beginning of the file: it is located in bytes 10 - 13 in the header. Knowing
+				the size of the header you can then process the pixels that make up the actual image.
+				(We don't need the rest of the header information.) The size is stored in bytes and is
+				not human readable, so you'll have to convert the bytes to an integer with:</p>
+				
+                <pre class="syntax">
+size = int.from_bytes(bytes_read, byteorder="little")
+</pre>				
+
+				<p>where <code>size</code> is the integer version of the bytes read from the file,
+				<code>bytes_read</code> are the bytes read from the file, and
+				<code>byteorder="little"</code> is required for <code>bmp</code> files. (It has to
+				do with little-endian versus big-endian bytes - don't worry about it.) You only have to
+				do this for the header size, pixel values do not have to be converted to <code>int</code>
+				to use them in calculations.</p>
+				
+				<figure class="caption">
+				  <object type="image/svg+xml" data="bmp_images.svg"></object>
+				  <figcaption>
+					A Bitmap (bmp) Image File Structure
+				  </figcaption>
+				</figure>
+				
+				<p>To extract the header size bytes from a file you must use the file <code>seek</code> and <code>read</code>
+				methods. <code>seek</code> takes as a parameter the number of the byte to start reading from (until now
+				we have used only 0 to position our reads at the beginning of a file). <code>read</code> takes
+				as a parameter the number of bytes to read from the file (<code>read</code> without a parameter
+				reads the entire contents of a file.)</p>
+				
+				<p>Since we are extracting bytes rather than strings from a file, you must use the following:</p>
+				
+				<ul>
+				<li>open a file for reading with <code>"rb"</code> rather than <code>"r"</code> to read bytes</li>
+				<li>open a file for writing with <code>"wb"</code> rather than <code>"w"</code> to write bytes</li>
+				<li><code>bytes_read = fh.read(no_of_bytes)</code> to read <code>no_of_bytes</code> bytes from 
+				the file handle <code>fh</code> and store them in <code>bytes_read</code></li>
+				<li><code>list_of_bytes = bytearray(bytes_read)</code> to convert the <code>bytes_read</code> into
+				a Python list of bytes so that you can work with the red, green, and blue bytes separately</li>
+				<li>the three bytes of a pixel are stored in reverse order as byte 0: blue, byte 1: green,
+				byte 2: red</li>				
+				</ul>				
+			
+                <p>Implement the following functions in the PyDev module <code>functions.py</code>
+                and test them from a PyDev module named <code class="tasks"></code>:</p>
+
+                <pre class="syntax">
+def to_gray(colour_pixel):
+    """
+    -------------------------------------------------------
+    Converts a single 24-bit (3 byte) BMP colour_pixel to gray using:
+    gray = 0.06 × red + 0.6 × green + 0.33 × blue
+    Use: gray_pixel = to_gray(colour_pixel)
+    -------------------------------------------------------
+    Parameters:
+        colour_pixel - a colour pixel (bytearray)
+    Returns:
+        gray_pixel - a gray pixel (bytearray)
+    -------------------------------------------------------
+    """
+</pre>
+                <pre class="syntax">
+def grayscale(fh_colour, fh_gray):
+    """
+    -------------------------------------------------------
+    Converts the 24-bit BMP image file fh_colour to grayscale and saves
+    it in fh_gray.
+    Use: grayscale(fh_colour, fh_gray)
+    -------------------------------------------------------
+    Parameters:
+        fh_colour - the input BMP file variable (file - open for reading bytes)
+        fh_gray - the output BMP file variable (file - open for writing bytes)
+    Returns:
+        None
+    -------------------------------------------------------
+    """
+</pre>
+
+
+                <p>Sample testing:</p>
+				
+<img alt="David Brown in colour" src="davidColour.bmp" width="100" height="100" style="float:left;">
+<p style="float:left;">&nbsp;becomes:&nbsp;</p>
+<img alt="David Brown in gray" src="davidGray.bmp" width="100" height="100">
+				
+				<p>Test your program with the file <a href="stupidColour.bmp" download="stupidColour.bmp">stupidColour.bmp</a>.</p>
+				
+                <hr>
+            </li>
+
+
+        </ol>
+    </main>
+
+    <footer>
+<!--
+Custom Physcomp Footer
+-->
+    <hr style="clear: both;">
+    <address>Wilfrid Laurier University 75 University Avenue
+    West, Waterloo, Ontario, Canada N2L 3C5
+    <br>phone: (519) 884-1970</address>
+<!--
+End of footer.
+-->
+    </footer>
+</body>
+</html>

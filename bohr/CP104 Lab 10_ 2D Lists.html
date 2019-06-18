@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+<title>CP104 Lab 10: 2D Lists</title>
+<meta charset="utf-8">
+<meta content="David Brown" name="author">
+<link rel="stylesheet" href="/physcomp/physcomp.css">
+<link rel="stylesheet" href="/js/dialog.css" />
+<link rel="stylesheet" href="/js/jquery-ui.css">
+<link rel="stylesheet" href="/js/jquery-ui.theme.min.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script defer src="/js/jquery.dialog.js"></script>
+<script defer src="/js/testCode.js"></script>
+<script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script>
+$(window).bind("load", function() {
+    $( "#sections" ).tabs({active: 0});
+	initialize();
+});
+</script>
+</head>
+<body>
+  <header>
+  <div class="navTop">
+    <nav>
+      <a href="/cp104/">CP104 : Home</a>
+      <a href="https://students.wlu.ca/programs/science/physics-and-computer-science/">Physics &amp; Computer Science</a>
+      <a href="http://students.wlu.ca">Students</a>
+      <a href="http://www.wlu.ca">wlu.ca</a>
+      </nav>
+  </div>    </header>
+  <section class="title">
+    <h1>CP104 Lab 10: 2D Lists</h1>
+<p class="version"><time>2019-05-04 07:05</time></p>
+<p>Week of <time>2019-07-14</time></p>
+        </section>
+  <div id="sections">
+    <ul>
+      <li><a href="#Topics">Topics</a></li>
+      <li><a href="#Tasks">Tasks</a></li>
+    </ul>
+    <section id="Topics">
+      <h2>Objectives</h2>
+      <p>In this lab, you practice working with 2-Dimensional (2D) Lists in
+        Python.</p>
+
+<hr>
+<h2>Instructions</h2>
+<ul>
+  <li>Create a PyDev project named <code><em>login</em>_l<em>n</em></code> (where <em>n</em>
+  is the lab number) and put all of your lab task material in this project.</li>
+  <li>Put your name, ID, and Laurier email address in the comments section of all
+    PyDev modules.</li>
+  <li>Add your partner's name/ID/email to your PyDev modules if you used pair programming in the
+    labs.</li>
+  <li>Test all your tasks and copy the test results to the file <code>testing.txt</code>.</li>
+  <li>You are to complete 5 of the listed tasks, each one worth 2 marks,
+    for a total of 10 marks. The lab instructor will tell you which 5 tasks to
+    complete at the beginning of the lab.</li>
+  <li>Ask a lab IA to mark your lab tasks before you leave the room.</li>
+  <li>Export your marked and completed PyDev project to a archive file
+    named <code><em>login</em>_l<em>n</em>.zip</code> (where <em>n</em>
+  is the lab number).</li>
+  <li>Both you and your pair programming partner must have a copy of this
+    project in their workspace. Get a copy of the archive file, import it into
+    your workspace, and rename the project with your login.</li>
+  <li>Upload your completed PyDev project to the appropriate dropbox in
+    <a href="https://mylearningspace.wlu.ca/">MyLearningSpace</a>.</li>
+</ul>
+<p>If you have problems creating, exporting, or renaming PyDev projects, follow
+  the instructions in <a href="/pydev/usingEclipsePyDev.php">Using Eclipse with PyDev</a> tutorial.</p>
+<hr>
+<h2>Documentation Guideline</h2>
+<ul>
+  <li>Syntax definitions are surrounded by a <span class="syntax nowrap">solid-line box</span>.</li>
+  <li>Sample Python code and output are surrounded by a <span class="example nowrap">dashed-line box</span>.</li>
+  <li>Python code is preceded by a right angle-bracket '<code>&gt;</code>'
+    (Do not type in the '<code>&gt;</code>' as part of your programs).</li>
+  <li>The results of executing code have nothing in front of them.</li>
+  <li>Sample keyboard input is <span class="underline">underlined</span>,
+    as in:
+    <pre>
+Enter a number: <span class="underline">34.5</span>
+</pre>
+</li>
+</ul>
+    </section>
+    <section id="Tasks">
+      <p>
+        Put all functions into a common PyDev library module named <code>functions.py</code>.
+        Test these functions by calling them from separate PyDev modules.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def generate_matrix_num(rows, cols, low, high, value_type):
+    """
+    -------------------------------------------------------
+    Generates a 2D list of numbers of the given type, 'float' or 'int'.
+    (To generate random float number use random.uniform and to
+    generate random integer number use random.randint)
+    Use: matrix = generate_matrix_num(rows, cols, low, high, value_type)
+    -------------------------------------------------------
+    Parameters:
+        rows - number of rows in the list (int &gt; 0)
+        cols - number of columns (int &gt; 0)
+        low - low value of range (float)
+        high - high value of range (float &gt; low)
+        value_type - type of values in the list, 'float' or 'int' (str)
+    Returns:
+        matrix - a 2D list of random numbers (2D list of float/int)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <span class="underline">3</span>
+Number of columns: <span class="underline">4</span>
+Low value: <span class="underline">-10</span>
+High value: <span class="underline">10</span>
+Type of values: <span class="underline">float</span>
+
+[[-6.715521262896857, 2.832332263818408, -9.639174469550253, -7.413579152118894], [-5.711470115891877, -8.196169662276777, 5.957379822776547, -1.3505501293285107], [6.01327913528462, 0.5179270486063707, 2.22213388672532, -5.035744481447908]]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def generate_matrix_char(rows, cols):
+    """
+    -------------------------------------------------------
+    Generates a 2D list of random character values
+    Use: matrix = generate_matrix_char(rows, cols)
+    -------------------------------------------------------
+    Parameters:
+        rows - number of rows in the generated matrix (int &gt; 0)
+        cols - number of columns in the generated matrix (int &gt; 0)
+    Returns:
+        matrix - a 2D list of random characters (2D list of str)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <span class="underline">3</span>
+Number of columns: <span class="underline">4</span>
+
+Matrix of characters:
+
+[['a', 'h', 'r', 'n'], ['n', 'x', 'g', 'm'], ['h', 'h', 'n', 'x']]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def matrix_distinct_values(rows, cols, low, high, value_type):
+    """
+    -------------------------------------------------------
+    Generates a 2D list of  unique numbers of type float or int.
+    Use: matrix = matrix_distinct_values(rows, cols, low, high, value_type)
+    -------------------------------------------------------
+    Parameters:
+        rows - number of rows in the list (int &gt; 0)
+        cols - number of columns (int &gt; 0)
+        low - low value of range (float)
+        high - high value of range (float &gt; low)
+        value_type - type of values in the list, 'float' or 'int' (str)
+    Returns:
+        matrix - a 2D list of unique values (list of int/float)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <span class="underline">4</span>
+Number of columns: <span class="underline">3</span>
+Low value: <span class="underline">-10</span>
+High value: <span class="underline">10</span>
+Type of values: <span class="underline">int</span>
+
+[[-8, -2, -7], [6, 8, 10], [-9, 9, 0], [3, 5, -10]]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def print_matrix_num(matrix, value_type):
+    """
+    -------------------------------------------------------
+    Prints the contents of a 2D list in a formatted table.
+    Prints float values with 2 decimal points and prints row and
+    column headings.
+    Use: print_matrix_num(matrix, 'float')
+    Use: print_matrix_num(matrix, 'int')
+    -------------------------------------------------------
+    Parameters:
+        matrix - a 2D list of values (2D list)
+        value_type - type of values in the list, 'float' or 'int' (str)
+    Returns:
+        None.
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <span class="underline">3</span>
+Number of columns: <span class="underline">4</span>
+Low value: <span class="underline">-10</span>
+High value: <span class="underline">10</span>
+Type of values: <span class="underline">float</span>
+
+        0      1      2      3
+ 0   3.19   5.40   0.00   6.38
+ 1  -5.07   3.55  -6.90  -0.73
+ 2  -6.91   7.86   0.24  -8.40
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def print_matrix_char(matrix):
+    """
+    -------------------------------------------------------
+    Prints the contents of a 2D list of strings in a formatted table.
+    Prints row and column headings.
+    Use: print_matrix_char(matrix)
+    -------------------------------------------------------
+    Parameters:
+        matrix - a 2D list of strings (2D list)
+    Returns:
+        None.
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <span class="underline">3</span>
+Number of columns: <span class="underline">4</span>
+
+      0    1    2    3
+ 0    c    u    r    i
+ 1    z    y    c    x
+ 2    e    q    y    m
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def words_to_matrix(word_list):
+    """
+    -------------------------------------------------------
+    Generates a 2D list of character values from the given
+    list of words. All words must be the same length.
+    Use: matrix = words_to_matrix(word_list)
+    -------------------------------------------------------
+    Parameters:
+        word_list - a list containing the words to be placed in
+            the matrix (list of string)
+    Returns:
+        matrix - a 2D list of characters of the given words
+         in word_list (2D list of string).
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Strings: ["cat", "dog", "big"]
+
+Matrix of characters:
+
+      0    1    2
+ 0    c    a    t
+ 1    d    o    g
+ 2    b    i    g
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def stats(matrix):
+    """
+    -------------------------------------------------------
+    Returns statistics on a 2D list.
+		Use: smallest, largest, total, average = stats(matrix)
+    -------------------------------------------------------
+    Parameters:
+        matrix - a 2D list of numbers (2D list of float/int)
+    Returns:
+        smallest - the smallest number in matrix (float/int)
+        largest - the largest number in matrix (float/int)
+        total - the total of the numbers in matrix (float/int)
+        average - the average of numbers in matrix (float/int)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <i>3</i>
+Number of columns: <i>4</i>
+Low value: <i>-10</i>
+High value: <i>10</i>
+
+        0      1      2      3
+ 0      2     -5     -3     -3
+ 1     -3     -1    -10      4
+ 2     -1     -7      2     -9
+
+Smallest = -10
+Largest = 4
+Total = -34
+Average = -2.83
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def find_position(matrix):
+    """
+    -------------------------------------------------------
+    Determines locations [row, column] of smallest and largest
+    values in a 2D list.
+    Use: s_loc, l_loc = find_position(matrix)
+    -------------------------------------------------------
+    Parameters:
+        matrix - a 2D list of numbers (2D list)
+    Returns:
+        s_loc - a list of of the row and column location of
+            the smallest value in matrix (list of int)
+        l_loc - a list of of the row and column location of
+            the largest value in matrix (list of int)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <i>4</i>
+Number of columns: <i>3</i>
+Low value: <i>-10</i>
+High value: <i>10</i>
+
+        0      1      2
+ 0      3    -10     -9
+ 1     -7     10    -10
+ 2      5     -6      4
+ 3      0     -4      7
+
+Smallest position: [0, 1]
+Smallest value: -10
+Largest position: [1, 1]
+Largest value: 10
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def find_less(matrix, n):
+    """
+    -------------------------------------------------------
+    Finds the location [row, column] of the first value in matrix
+    that is smaller than a target value, n. If there is no such
+    number in matrix, it should return an empty list.
+    -------------------------------------------------------
+    Parameters:
+        matrix - a 2D list of numbers (2D list)
+        n - the target value (float)
+    Returns:
+        loc - a list of the row and column location of
+            the the first value smaller than n in values,
+            an empty list otherwise (list of int)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <i>4</i>
+Number of columns: <i>3</i>
+Low value: <i>-10</i>
+High value: <i>10</i>
+Number to find: <i>3</i>
+
+        0      1      2
+ 0     10      1     -5
+ 1    -10     -5      6
+ 2      6      0      8
+ 3      0     -9     -2
+
+Position: [0, 1]
+Value: 1
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def count_frequency(matrix, c):
+    """
+    -------------------------------------------------------
+    Count the number of appearances of the given character c
+    in matrix.
+    Use: count = count_frequency(matrix, c)
+    -------------------------------------------------------
+    Parameters:
+        matrix - the matrix to search in it (2D list of str)
+        c - character to search for it (str, len = 1)
+    Returns:
+        count - the number of appearances of c in the matrix (int)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Number of rows: <span class="underline">5</span>
+Number of columns: <span class="underline">4</span>
+
+Matrix of characters:
+       0      1      2      3
+0      h      s      d      h
+1      r      z      k      c
+2      a      d      c      x
+3      j      i      x      j
+4      f      o      q      s
+
+Enter the character to search for: <span class="underline">c</span>
+Character c appears 2 times in matrix
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def find_word_horizontal(matrix, word):
+    """
+    -------------------------------------------------------
+    Look for word in each row of the given matrix of characters.
+    Returns a list of indexes of all rows that are equal to word.
+    Returns an empty list if no row is equal to word.
+    Use: rows = find_word_horizontal(matrix, word)
+    -------------------------------------------------------
+    Parameters:
+        matrix - the matrix of characters (2D list of str)
+        word - the word to search for (str)
+    Returns:
+        rows - a list of row indexes (list of int)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Strings: ["cat", "dog", "big"]
+
+Matrix of characters:
+
+      0    1    2
+ 0    c    a    t
+ 1    d    o    g
+ 2    b    i    g
+
+The word to search for: <span class="underline">dog</span>
+
+The word is found in rows [1]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def find_word_vertical(matrix, word):
+    """
+    -------------------------------------------------------
+    Look for word in each column of the given matrix of characters.
+    Returns a list of indexes of all column that are equal to word.
+    Returns an empty list if no column is equal to word.
+    Use: cols = find_word_vertical(matrix, word)
+    -------------------------------------------------------
+    Parameters:
+        matrix - the matrix of characters (2D list of str)
+        word - the word to search for (str)
+    Returns:
+        cols - a list of column indexes (list of int)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Strings: ["cdb", "aoi", "tgg"]
+
+Matrix of characters:
+
+      0    1    2
+ 0    c    d    b
+ 1    a    o    i
+ 2    t    g    g
+
+The word to search for: <span class="underline">dog</span>
+
+The word is found in columns [1]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def find_word_diagonal(matrix, word):
+    """
+    -------------------------------------------------------
+    Returns whether word is on the diagonal of a square matrix
+    of characters.
+    Use: found = find_word_diagonal(matrix, word)
+    -------------------------------------------------------
+    Parameters:
+        matrix - a 2d list of characters (2d list of str)
+        word - the word to compare against the diagonal of matrix (str)
+    Returns:
+        found - True if word is on the diagonal of matrix,
+            False otherwise (boolean)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Strings: ["cat", "dog", "big"]
+
+Matrix of characters:
+
+      0    1    2
+ 0    c    a    t
+ 1    d    o    g
+ 2    b    i    g
+
+The word to search for: <span class="underline">cog</span>
+
+The word 'cog' is found on the diagonal.
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def scalar_multiply(matrix, num):
+    """
+    -------------------------------------------------------
+    Update matrix by multiplying each element of matrix by num.
+    Use: scalar_multiply(matrix, num)
+    -------------------------------------------------------
+    Parameters:
+        matrix - the matrix to multiply (2D list of int/float)
+        num - the number to multiply by (int/float)
+    Returns:
+        None
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Matrix before scalar multiplication:
+       0      1      2
+0     -6      7     -6
+1     -6      3      1
+2     -4      3      6
+3     -5      8      1
+
+Enter number: <span class="underline">5</span>
+
+Matrix after scalar multiplication:
+       0      1      2
+0    -30     35    -30
+1    -30     15      5
+2    -20     15     30
+3    -25     40      5
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def matrix_transpose(a):
+    """
+    -------------------------------------------------------
+    Transpose the contents of matrix a.
+    Use: b = matrix_transpose(a):
+    -------------------------------------------------------
+    Parameters:
+        a - a 2D list (2D list of ?)
+    Returns:
+        b - the transposed matrix (2D list of ?)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Original matrix:
+        0      1      2
+ 0     -5     -4     -9
+ 1     -5      0     -7
+ 2      6      9     10
+ 3      5     -9      3
+
+Transposed matrix
+        0      1      2      3
+ 0     -5     -5      6      5
+ 1     -4      0      9     -9
+ 2     -9     -7     10      3
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p> <pre class="syntax">
+def matrix_equal(matrix1, matrix2):
+    """
+    -------------------------------------------------------
+    Compares two matrices to see if they are equal - i.e. have the
+    same contents in the same locations.
+    Use: equal = matrix_equal(matrix1, matrix2)
+    -------------------------------------------------------
+    Parameters:
+        matrix1 - the first matrix (2D list of ?)
+        matrix2 - the second matrix (2D list of ?)
+    Returns:
+        equal - True if matrix1 and matrix2 are equal,
+            False otherwise (boolean)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+First matrix:
+      0    1    2
+ 0    c    a    t
+ 1    d    o    g
+ 2    b    i    g
+
+Second matrix:
+      0    1    2
+ 0    c    a    t
+ 1    d    o    g
+ 2    b    i    g
+
+Equal matrices: True
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+      </ol>
+    </section>
+  </div>
+  <footer>
+<!--
+Custom Physcomp Footer
+-->
+    <hr style="clear: both;">
+    <address>Wilfrid Laurier University 75 University Avenue
+    West, Waterloo, Ontario, Canada N2L 3C5
+    <br>phone: (519) 884-1970</address>
+<!--
+End of footer.
+-->
+    </footer>
+</body>
+</html>

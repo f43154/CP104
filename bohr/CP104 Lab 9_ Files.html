@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+<title>CP104 Lab 9: Files</title>
+<meta charset="utf-8">
+<meta content="David Brown" name="author">
+<link rel="stylesheet" href="/physcomp/physcomp.css">
+<link rel="stylesheet" href="/js/dialog.css" />
+<link rel="stylesheet" href="/js/jquery-ui.css">
+<link rel="stylesheet" href="/js/jquery-ui.theme.min.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script defer src="/js/jquery.dialog.js"></script>
+<script defer src="/js/testCode.js"></script>
+<script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script>
+$(window).bind("load", function() {
+    $( "#sections" ).tabs({active: 0});
+	initialize();
+});
+</script>
+</head>
+<body>
+  <header>
+  <div class="navTop">
+    <nav>
+      <a href="/cp104/">CP104 : Home</a>
+      <a href="https://students.wlu.ca/programs/science/physics-and-computer-science/">Physics &amp; Computer Science</a>
+      <a href="http://students.wlu.ca">Students</a>
+      <a href="http://www.wlu.ca">wlu.ca</a>
+      </nav>
+  </div>    </header>
+  <section class="title">
+    <h1>CP104 Lab 9: Files</h1>
+<p class="version"><time>2019-05-04 07:05</time></p>
+<p>Week of <time>2019-07-07</time></p>
+        </section>
+  <div id="sections">
+    <ul>
+      <li><a href="#Topics">Topics</a></li>
+      <li><a href="#Tasks">Tasks</a></li>
+    </ul>
+    <section id="Topics">
+      <h2>Objectives</h2>
+      <p>In this lab, you practice working with Files in Python.</p>
+
+<hr>
+<h2>Instructions</h2>
+<ul>
+  <li>Create a PyDev project named <code><em>login</em>_l<em>n</em></code> (where <em>n</em>
+  is the lab number) and put all of your lab task material in this project.</li>
+  <li>Put your name, ID, and Laurier email address in the comments section of all
+    PyDev modules.</li>
+  <li>Add your partner's name/ID/email to your PyDev modules if you used pair programming in the
+    labs.</li>
+  <li>Test all your tasks and copy the test results to the file <code>testing.txt</code>.</li>
+  <li>You are to complete 5 of the listed tasks, each one worth 2 marks,
+    for a total of 10 marks. The lab instructor will tell you which 5 tasks to
+    complete at the beginning of the lab.</li>
+  <li>Ask a lab IA to mark your lab tasks before you leave the room.</li>
+  <li>Export your marked and completed PyDev project to a archive file
+    named <code><em>login</em>_l<em>n</em>.zip</code> (where <em>n</em>
+  is the lab number).</li>
+  <li>Both you and your pair programming partner must have a copy of this
+    project in their workspace. Get a copy of the archive file, import it into
+    your workspace, and rename the project with your login.</li>
+  <li>Upload your completed PyDev project to the appropriate dropbox in
+    <a href="https://mylearningspace.wlu.ca/">MyLearningSpace</a>.</li>
+</ul>
+<p>If you have problems creating, exporting, or renaming PyDev projects, follow
+  the instructions in <a href="/pydev/usingEclipsePyDev.php">Using Eclipse with PyDev</a> tutorial.</p>
+<hr>
+<h2>Documentation Guideline</h2>
+<ul>
+  <li>Syntax definitions are surrounded by a <span class="syntax nowrap">solid-line box</span>.</li>
+  <li>Sample Python code and output are surrounded by a <span class="example nowrap">dashed-line box</span>.</li>
+  <li>Python code is preceded by a right angle-bracket '<code>&gt;</code>'
+    (Do not type in the '<code>&gt;</code>' as part of your programs).</li>
+  <li>The results of executing code have nothing in front of them.</li>
+  <li>Sample keyboard input is <span class="underline">underlined</span>,
+    as in:
+    <pre>
+Enter a number: <span class="underline">34.5</span>
+</pre>
+</li>
+</ul>
+    </section>
+    <section id="Tasks">
+      <p>
+        A discussion of lists and their methods is available in <a
+          href="/cp104/notes/files.php">Files</a> notes.
+      </p>
+      <p>
+        For these tasks you will work with three files: <a href="customers.txt">customers.txt</a>,
+        <a href="numbers.txt">numbers.txt</a> and <a href="words.txt">words.txt</a>.
+      </p>
+      <p>
+        <a href="customers.txt">customers.txt</a> contains the following data:
+      </p>
+      <pre>
+12345,Tom,Black,300.00,1998-01-30
+23456,Alice,Smith,1200.50,1998-02-20
+14567,Jane,White,900.00,1998-07-01
+43564,Weilin,Zhao,450.25,1998-01-03
+45432,Bina,Mehta,278.95,1998-03-21
+</pre>
+      <p>There are five customers in the file: 'Tom Black' is the first
+        customer, 'Bina Mehta' is the last customer. There are five fields for
+        each customer: ID, first name, last name, account balance, and account
+        opening date in ISO YYYY-MM-DD format.</p>
+      <a href="numbers.txt">numbers.txt</a> and <a href="words.txt">words.txt</a>
+      each contains a number/word on each line, respectively.
+      <p>
+        Put all functions into a common PyDev library module named <code>functions.py</code>.
+        Test these functions by calling them from separate PyDev modules.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="customers.txt">customers.txt</a> file
+            in this question.
+          </p> <pre class="syntax">
+def get_customer_record(file_handle, n):
+    """
+    -------------------------------------------------------
+    Find the n-th record in a comma-delimited sequential file.
+    Records are numbered starting with 0.
+    Use: result = get_customer_record(file_handle, n)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+        n - the number of the record to return (int &gt; 0)
+    Returns:
+        result - a list of the fields of the n-th record if it exists,
+            an empty list otherwise (list)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Find record n
+Enter a record number: <span class="underline">3</span>
+['43564', 'Weilin', 'Zhao', '450.25', '1998-01-03']
+</pre> <pre class="example">
+Find record n
+Enter a record number: <span class="underline">9</span>
+[]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="customers.txt">customers.txt</a> file
+            in this question.
+          </p> <pre class="syntax">
+def get_customer_by_id(file_handle, id_number):
+    """
+    -------------------------------------------------------
+    Find the record for a given ID in a sequential file.
+    Use: result = get_customer_by_id(file_handle, id_number)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+        id_number - the id_number to match (str)
+    Returns:
+        result - the record with id_number if it exists,
+            an empty list otherwise (list)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Find customer by id_number
+Enter an ID: <span class="underline">23456</span>
+['23456', 'Alice', 'Smith', '1200.50', '1998-02-20']
+</pre> <pre class="example">
+Find customer by id_number
+Enter an ID: <span class="underline">99999</span>
+[]
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="customers.txt">customers.txt</a> file
+            in this question.
+          </p> <pre class="syntax">
+def get_best_customer(file_handle):
+    """
+    -------------------------------------------------------
+    Find the customer with the largest balance. Assumes file
+    is not empty.
+    Use: result = get_best_customer(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+    Returns:
+        result - the record with the greatest balance (list)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Find customer with largest balance:
+['23456', 'Alice', 'Smith', '1200.50', '1998-02-20']
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="customers.txt">customers.txt</a> file
+            in this question.
+          </p> <pre class="syntax">
+def get_first_customer(file_handle):
+    """
+    -------------------------------------------------------
+    Find the customer with the earliest sign-up date. Assumes
+    file is not empty.
+    Use: result = get_first_customer(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+    Returns:
+        result - the record with the earliest sign-in date (list)
+    -------------------------------------------------------
+    """
+</pre>
+          <p>
+            Hint: because the dates are stored in <a
+              href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format,
+            you can compare them directly as strings and do not have to break
+            them up into separate years, months, and days.
+          </p>
+          <p>Sample testing:</p> <pre class="example">
+Find customer with earliest sign-in:
+['43564', 'Weilin', 'Zhao', '450.25', '1998-01-03']
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="customers.txt">customers.txt</a> file
+            in this question.
+          </p> <pre class="syntax">
+def append_customer(file_handle, fields):
+    """
+    -------------------------------------------------------
+    Appends a customer record to a comma-delimited sequential file.
+    Use: append_customer(file_handle, fields)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to add to (file - open for appending)
+        fields - a list of the field data to append to the file (list)
+    Returns:
+       None
+    -------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Data:  ['35612', 'David', 'Brown', 237.56, '2008-10-10']
+<em>data appended to file</em>
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="numbers.txt">numbers.txt</a> file in
+            this question.
+          </p> <pre class="syntax">
+def number_stats(file_handle):
+    """
+    -------------------------------------------------------
+    returns statistics on the numbers in a file.
+    Use: smallest, largest, total, average = number_stats(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+    Returns:
+        smallest - smallest number (int)
+        largest - largest number (int)
+        total - sum of all the numbers in the file (int)
+        average - average of all the numbers (float)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+Smallest: 1
+Largest: 13
+Total: 113.00
+Average: 7.06
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="numbers.txt">numbers.txt</a> file in
+            this question.
+          </p> <pre class="syntax">
+def append_max_num(file_handle):
+    """
+    -------------------------------------------------------
+    Appends a number to the end of file_handle. The number appended
+    is the maximum of all the numbers currently in the file.
+    Use: num = append_max_num(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading/writing)
+    Returns:
+        num - the number appended to the file (int)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+file 'numbers.txt' open for reading and writing
+13 is appended
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="numbers.txt">numbers.txt</a> file in
+            this question.
+          </p> <pre class="syntax">
+def append_increment(file_handle):
+    """
+    -------------------------------------------------------
+    Appends a number to the end of the file_handle. The number appended
+    is the last number in the file plus 1.
+    Use: num = append_increment(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading/writing)
+    Returns:
+        num - the number appended to the file (int)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+file 'numbers.txt' open for reading and writing
+14 is appended
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="numbers.txt">numbers.txt</a> file in
+            this question.
+          </p> <pre class="syntax">
+def count_frequency_value(file_handle, value):
+    """
+    -------------------------------------------------------
+    Counts the number of appearances of value in file_handle.
+    Use: count = count_frequency_value(file_handle, value)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+        value - the value to count (int)
+    Returns:
+        count - the number of appearance of value in file_handle (int)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+file 'numbers.txt' open for reading
+Value to count: <span class="underline">9</span>
+9 appears 2 time(s)
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="words.txt">words.txt</a> file in this
+            question.
+          </p> <pre class="syntax">
+def count_frequency_word(file_handle, word):
+    """
+    -------------------------------------------------------
+    Counts the number of appearances of word in file_handle.
+    Use: count = count_frequency_word(file_handle, word)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+        word - the word to search for it in file_handle
+    Returns:
+        count - the number of appearance of word in file_handle (int)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+file 'words.txt' open for reading
+Word to count: <span class="underline">Exercise</span>
+'Exercise' appears 3 time(s)
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="words.txt">words.txt</a> file in this
+            question.
+          </p> <pre class="syntax">
+def find_longest(file_handle):
+    """
+    -------------------------------------------------------
+    Finds the last word with longest length in file_handle.
+    Use: word = find_longest(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+    Returns:
+        word - the last word with the longest length in file_handle (str)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+file 'words.txt' open for reading
+'Education' is the last longest word
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="words.txt">words.txt</a> file in this
+            question.
+          </p> <pre class="syntax">
+def find_shortest(file_handle):
+    """
+    -------------------------------------------------------
+    Finds the first word with shortest length in file_handle.
+    Use: word = find_longest(file_handle)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading)
+    Returns:
+        word - the first word with the shortest length in file_handle (str)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+file 'words.txt' open for reading
+'Hello' is the first shortest word
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="words.txt">words.txt</a> file in this
+            question.
+          </p> <pre class="syntax">
+def delete_line(file_handle, n):
+    """
+    -------------------------------------------------------
+    Removes line number n from file_handle.
+    Lines are numbered starting with 0.
+    Use: delete_line(file_handle, n)
+    -------------------------------------------------------
+    Parameters:
+        file_handle - file to search (file - open for reading/writing)
+        n - the line number to be removed
+    Returns:
+        removed - the contents of the line that was removed (str)
+    ------------------------------------------------------
+    """
+</pre>
+          <p>Sample testing:</p> <pre class="example">
+words.txt open for reading/writing
+Enter line number to delete: <span class="underline">7</span>
+Line 7 deleted:
+Halloween
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="words.txt">words.txt</a> file in this
+            question.
+          </p> <pre class="syntax">
+def file_copy(file_handle_1, file_handle_2):
+    """
+    -------------------------------------------------------
+    Copies the contents of file_handle_1 to file_handle_2.
+    Any contents of file_handle_2 are overwritten.
+    Use: file_copy(file_handle_1, file_handle_2)
+    -------------------------------------------------------
+    Parameters:
+        file_handle_1 - source file (file - open for reading)
+        file_handle_2 - target file (file - open for writing)
+    Returns:
+        None
+    ------------------------------------------------------
+    """
+</pre>
+          <p>
+            <strong>Note:</strong> In order to see a new file after it has been
+            created in Eclipse, right-click on the project name and choose <em>refresh</em>.
+            The new file will then show up in the <code>src</code> folder list.
+          </p>
+          <p>Sample testing:</p> <pre class="example">
+Copying 'words.txt' to 'new_words.txt'
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+        <li>
+          <p>
+            Implement the following function in the PyDev module <code>functions.py</code>
+            and test it from a PyDev module named <code class="tasks"></code>:
+          </p>
+          <p>
+            You need to work with <a href="words.txt">words.txt</a> file in this
+            question.
+          </p> <pre class="syntax">
+def file_copy_n(file_handle_1, file_handle_2, n):
+    """
+    -------------------------------------------------------
+    Copies n record from file_handle_1 (starting from the beginning of the file) to file_handle2
+    Use: file_copy_n(file_handle_1, file_handle_2, n)
+    -------------------------------------------------------
+    Parameters:
+        file_handle_1 - file to search (file - open for reading)
+        file_handle_2 - file to search (file - open for appending)
+    Returns:
+        None
+    ------------------------------------------------------
+    """
+</pre>
+          <p>
+            <strong>Note:</strong> In order to see a new file after it has been
+            created in Eclipse, right-click on the project name and choose <em>refresh</em>.
+            The new file will then show up in the <code>src</code> folder list.
+          </p>
+          <p>Sample testing:</p> <pre class="example">
+Copying 'words.txt' to 'new_words.txt'
+Number of lines to copy: <span class="underline">5</span>
+</pre>
+<div class="submit">
+<form enctype="multipart/form-data" accept-charset="utf-8">
+<input type="hidden" name="tester" value="f_is_hydroxide"><input type="hidden" name="course" value="CP104"><p>Test <code style="font-size: large;">functions.py</code>: <br><input type="file" name="file" required="required" accept=".py" data-filename="functions.py"><button type="button" name="btnSubmit">Submit</button></p>
+</form>
+<div class="accordion">
+<button>Results</button><div>
+<h3 style="display: none;">Loading: <code></code>
+</h3>
+<p class="loader" style="display: none;"></p>
+<div></div>
+</div>
+</div>
+</div>
+          <hr>
+        </li>
+      </ol>
+    </section>
+  </div>
+  <footer>
+<!--
+Custom Physcomp Footer
+-->
+    <hr style="clear: both;">
+    <address>Wilfrid Laurier University 75 University Avenue
+    West, Waterloo, Ontario, Canada N2L 3C5
+    <br>phone: (519) 884-1970</address>
+<!--
+End of footer.
+-->
+    </footer>
+</body>
+</html>
