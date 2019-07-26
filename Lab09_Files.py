@@ -197,10 +197,16 @@ print("\n# # # # # TASK 6 # # # # #")
 
 
 def number_stats(fv):
-    # Make list from numbers.txt
-    my_list = open(fv).read()
-    int()
+    f = open(fv, "r")
+    i = 0
+#     file_length = int(len(f.readlines()))
+#     while i < file_length:
+#         print(int(f.readline()))
+#         i += 1
+    while i < 5:
+        print(int(f.readline()))
+        i += 1
 
-
+    
 fv = "numbers.txt"
 number_stats(fv)
