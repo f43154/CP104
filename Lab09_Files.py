@@ -8,6 +8,8 @@ Email: email@mylaurier.ca
 
 Completed Task 1 in....far too long, took time off to commute for new job and eventually move to new home
 '''
+from cgitb import small
+from pickle import APPEND
 '''
 # # # # # TASK 1 # # # # #
 print("\n# # # # # TASK 1 # # # # #")
@@ -191,22 +193,72 @@ import re
 fv = "customers.txt"
 fields = input("Data:")
 customer_by_id(fv, fields)
-'''
+
 # # # # # TASK 6 # # # # #
 print("\n# # # # # TASK 6 # # # # #")
 
 
 def number_stats(fv):
-    f = open(fv, "r")
-    i = 0
-#     file_length = int(len(f.readlines()))
-#     while i < file_length:
-#         print(int(f.readline()))
-#         i += 1
-    while i < 5:
-        print(int(f.readline()))
-        i += 1
+    my_list = open(fv).read()
+    my_list = [int(n) for n in my_list.split()]
+    total = 0
+    smallest = 0
+    largest = 0
+    for i in range(0, len(my_list), 1):
+        total += my_list[i]
+        if my_list[i] < smallest:
+            smallest = my_list[i]
+        if my_list[i] > largest:
+            largest = my_list[i]
+    print("Smallest:", smallest)
+    print("Largest:", largest)
+    print("Total: {:.2f}".format(total))
+    print("Average: {:.2f}".format(total / len(my_list)))
 
-    
+
 fv = "numbers.txt"
 number_stats(fv)
+
+# # # # # TASK 7 # # # # #
+print("\n# # # # # TASK 7 # # # # #")
+
+
+def append_max_num(fv):
+    my_list = open(fv).read()
+    my_list = [int(n) for n in my_list.split()]
+    num = 0
+    for i in range(0, len(my_list), 1):
+        if my_list[i] > num:
+            num = my_list[i]
+    print("{} is appended".format(num))
+
+
+fv = "numbers.txt"
+f = open(fv, "r+")
+if not f.closed:
+    print("file '{}' open for reading and writing".format(fv))
+    append_max_num(fv)
+
+# # # # # TASK 8 # # # # #
+print("\n# # # # # TASK 8 # # # # #")
+
+
+def append_increment(fv):
+    my_list = open(fv).read()
+    my_list = [int(n) for n in my_list.split()]
+    num = 0
+    for i in range(0, len(my_list), 1):
+        if my_list[i] > num:
+            num = my_list[i]
+        my_list.append(num + 1)
+    print("{} is appended".format(my_list[len(my_list) - 1]))
+
+
+fv = "numbers.txt"
+f = open(fv, "r+")
+if not f.closed:
+    print("file '{}' open for reading and writing".format(fv))
+    append_increment(fv)
+'''
+# # # # # TASK 9 # # # # #
+print("\n# # # # # TASK 9 # # # # #")
