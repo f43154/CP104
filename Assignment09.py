@@ -8,10 +8,6 @@ Email: email@mylaurier.ca
 
 Completed Task 1 and 2 in 30 mins
 '''
-import re
-
-from pip._vendor.html5lib._ihatexml import letter
-
 '''
 # # # # # TASK 1 # # # # #
 print("\n# # # # # TASK 1 # # # # #")
@@ -85,9 +81,13 @@ fh = "addresses.txt"
 print("Enter address file name:", fh)
 print()
 get_addresses(fh)
-'''
+
 # # # # # TASK 4 # # # # #
 print("\n# # # # # TASK 4 # # # # #")
+
+
+from test.test_threading_local import target
+import re
 
 
 def merge_letters(fh_letter, fh_addresses, fh_merged):
@@ -104,18 +104,31 @@ def merge_letters(fh_letter, fh_addresses, fh_merged):
         start += 4
         end += 4
         i += 1
-        
-    # import letter template
-    f_letter = open(fh_letter, "r")
-    letter_template = f_letter.read()
-
+    
     # merge addresses into letter template
-    letter_template.replace("[forename]", nested_address_list[0][0])
-    print(letter_template)
-    print(nested_address_list[0][0])
+    for i in range(0, len(nested_address_list), 1):
+        replacements = {"[forename]":nested_address_list[i][0], "[surname]":nested_address_list[i][1], "[street]":nested_address_list[i][2], "[city]":nested_address_list[i][3]}
+        lines = []
+        with open(fh_letter) as infile:
+            for line in infile:
+                for src, target in replacements.items():
+                    line = line.replace(src, target)
+                lines.append(line)
+        with open(fh_merged, "a") as outfile:
+            for line in lines:
+                outfile.write(line)
 
 
 fh_letter = "letter.txt"
 fh_addresses = "addresses.txt"
 fh_merged = "merged_letters.txt"
 merge_letters(fh_letter, fh_addresses, fh_merged)
+'''
+
+# # # # # TASK 5 # # # # #
+print("\n# # # # # TASK 5 # # # # #")
+
+
+def student_info(students):
+    print()
+    
