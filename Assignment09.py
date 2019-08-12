@@ -123,12 +123,48 @@ fh_letter = "letter.txt"
 fh_addresses = "addresses.txt"
 fh_merged = "merged_letters.txt"
 merge_letters(fh_letter, fh_addresses, fh_merged)
-'''
+
 
 # # # # # TASK 5 # # # # #
 print("\n# # # # # TASK 5 # # # # #")
 
+import re
+
 
 def student_info(students):
-    print()
+    f = open(fh).read()
+    my_list = re.split("\n|\t", f)
+    my_list = [spaces for spaces in my_list if spaces.strip()]
+    nested_list = []
+    start = 0
+    end = 2
+    i = 0
+    while i < (len(my_list) / 2):
+        nested_list.append(my_list[start:end])
+        start += 2
+        end += 2
+        i += 1
     
+    lowest = 100
+    highest = 0
+    total = 0
+    
+    for i in range(0, len(nested_list), 1):
+        if int(nested_list[i][1]) > highest:
+            highest = int(nested_list[i][0])
+        if int(nested_list[i][1]) < lowest:
+            lowest = int(nested_list[i][0])
+        total += int(nested_list[i][1])
+    
+    average = total / len(nested_list)
+    print("ID of lowest mark:", lowest)
+    print("ID of highest mark:", highest)
+    print("Average:", average)
+
+    
+fh = "students.txt"
+students = []
+student_info(students)
+'''
+# # # # # TASK 6 # # # # #
+print("\n# # # # # TASK 6 # # # # #")
