@@ -168,3 +168,23 @@ student_info(students)
 '''
 # # # # # TASK 6 # # # # #
 print("\n# # # # # TASK 6 # # # # #")
+
+
+def substitute(fh_in, fh_out, ciphertext):
+    print()  # Leave a space between ciphertext and everything else
+    message = open(fh_in).read()
+    message.upper()
+    
+    alphabet = "abcDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet = [char for char in alphabet.upper()]
+    print("alphabet", alphabet)
+    ciphertext = [char for char in ciphertext.upper()]
+    print("ciphertext", ciphertext)
+
+
+fh_in = "pelee.txt"
+fh_out = "pelee_substitute.txt"
+print("Input file:", fh_in)
+print("Output file:", fh_out)
+ciphertext = input("Enter ciphertext:")
+substitute(fh_in, fh_out, ciphertext)
