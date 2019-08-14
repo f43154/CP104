@@ -165,7 +165,7 @@ def student_info(students):
 fh = "students.txt"
 students = []
 student_info(students)
-'''
+
 # # # # # TASK 6 # # # # #
 print("\n# # # # # TASK 6 # # # # #")
 
@@ -173,13 +173,34 @@ print("\n# # # # # TASK 6 # # # # #")
 def substitute(fh_in, fh_out, ciphertext):
     print()  # Leave a space between ciphertext and everything else
     message = open(fh_in).read()
-    message.upper()
+    message = message.upper()
+    message_list = [char for char in message]
     
     alphabet = "abcDEFGHIJKLMNOPQRSTUVWXYZ"
     alphabet = [char for char in alphabet.upper()]
-    print("alphabet", alphabet)
+#     print("alphabet\t", alphabet)
     ciphertext = [char for char in ciphertext.upper()]
-    print("ciphertext", ciphertext)
+#     print("ciphertext\t", ciphertext)
+    
+    new_message_list = []
+#     print()
+#     print("message\t\t", message_list)
+    
+    for i in range(0, len(message_list), 1):
+        # print("{} alphabet[i]".format(alphabet[i]))
+        # print("{} alphabet.index(alphabet[i])".format(alphabet.index(alphabet[i])))
+        if message_list[i] in alphabet:
+            new_message_list.append(ciphertext[alphabet.index(message_list[i])])
+        else:
+            new_message_list.append(message_list[i])
+#     print("new message list", new_message_list)
+    new_message = ''.join(new_message_list)
+#     print()
+#     print("message\t\t", message)
+#     print("new message\t", new_message)
+
+    with open(fh_out, "a") as outfile:
+        outfile.write(new_message)
 
 
 fh_in = "pelee.txt"
@@ -188,3 +209,6 @@ print("Input file:", fh_in)
 print("Output file:", fh_out)
 ciphertext = input("Enter ciphertext:")
 substitute(fh_in, fh_out, ciphertext)
+'''
+# # # # # TASK 7 # # # # #
+print("\n# # # # # TASK 7 # # # # #")
