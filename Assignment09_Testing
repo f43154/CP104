@@ -1,0 +1,53 @@
+
+# # # # # TASK 1 # # # # #
+Enter input file name: wilde.txt
+Enter n:7
+
+Quotes from Oscar Wilde - 1854 - 1900
+
+"Always forgive your enemies; nothing annoys them so much."
+
+"Be yourself; everyone else is already taken."
+
+"To live is the rarest thing in the world. Most people exist, that is all."
+
+"Education is an admirable thing, but it is well to remember from time to time that nothing that is worth knowing can be taught."
+
+"The public is wonderfully tolerant. It forgives everything except genius."
+
+"Be yourself; everyone else is already taken."
+
+"Some cause happiness wherever they go; others whenever they go."
+
+
+# # # # # TASK 2 # # # # #
+Enter input file name: wilde.txt
+Enter output file name: wilde_numbered.txt
+
+# # # # # TASK 3 # # # # #
+Enter address file name: addresses.txt
+
+['David', 'Brown', 'King St', 'Waterloo']
+['Angele', 'Hamel', 'Weber St', 'Waterloo']
+['Tasmin', 'Brown', "Children's Road", 'Waterloo']
+['Duran', 'Duran', 'Rock Ave', 'Waterloo']
+['Jane', 'Doe', 'Upscale Boulevard', 'Waterloo']
+
+# # # # # TASK 4 # # # # #
+
+# # # # # TASK 5 # # # # #
+ID of lowest mark: 820000075
+ID of highest mark: 820000000
+Average: 56.2
+
+# # # # # TASK 6 # # # # #
+Input file: pelee.txt
+Output file: pelee_substitute.txt
+Enter ciphertext:DAVIBROWNZCEFGHJKLMPQSTUXY
+
+
+# # # # # TASK 7 # # # # #
+Input file: pelee.txt
+Output file: pelee_shift.txt
+Enter shift: 7
+
