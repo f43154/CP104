@@ -203,6 +203,131 @@ rows, cols, low, high = (3, 4, -10, 10)
 matrix = [[randint(low, high) for i in range(cols)] for j in range(rows)]
 print_matrix_num(matrix)
 stats(matrix)
-'''
+
 # # # # # TASK 7 # # # # #
 print("\n# # # # # TASK 7 # # # # #")
+
+from random import randint
+
+    
+def print_matrix_num(matrix):
+    print("  ", end="")
+    
+    for i in range(0, cols, 1):
+        print("  {:5}".format(i), end="")
+    print("")
+    for i in range(0, rows, 1):
+        print(" {}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("  {:5}".format(matrix[i][j]), end="")
+        print("")
+
+
+def stats(matrix):
+    smallest = 100
+    largest = 0
+    total = 0
+    for i in range(0, rows, 1):
+        for j in range(0, cols, 1):
+            if matrix[i][j] < smallest:
+                smallest = matrix[i][j]
+                smallest_position = [i, j]
+            if matrix[i][j] > largest:
+                largest = matrix[i][j]
+                largest_position = [i, j]
+            total += matrix[i][j]            
+    print("\nSmallest position: {}\nSmallest value: {}\nLargest position: {}\nLargest value: {}".format(smallest_position, smallest, largest_position, largest))
+
+
+rows, cols, low, high = (3, 4, -10, 10)
+print("Number of rows: {}\nNumber of columns: {}\nLow value: {}\nHigh value: {}\n".format(rows, cols, low, high))
+# rows = int(input("Number of rows:"))
+# cols = int(input("Number of columns:"))
+# low = int(input("Low value:"))
+# high = int(input("High value:"))
+matrix = [[randint(low, high) for i in range(cols)] for j in range(rows)]
+print_matrix_num(matrix)
+stats(matrix)
+
+# # # # # TASK 8 # # # # #
+print("\n# # # # # TASK 8 # # # # #")
+
+from random import randint
+
+    
+def print_matrix_num(matrix):
+    print("  ", end="")
+    
+    for i in range(0, cols, 1):
+        print("  {:5}".format(i), end="")
+    print("")
+    for i in range(0, rows, 1):
+        print(" {}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("  {:5}".format(matrix[i][j]), end="")
+        print("")
+
+
+def find_less(matrix, n):
+    for i in range(0, rows, 1):
+        for j in range(0, cols, 1):
+            if matrix[i][j] < n:
+                n = matrix[i][j]
+                position = [i, j]
+    print("\nPosition: {}\nValue: {}".format(position, n))
+
+
+rows, cols, low, high, n = (3, 4, -10, 10, 3)
+print("Number of rows: {}\nNumber of columns: {}\nLow value: {}\nHigh value: {}\nTarget value: {}\n".format(rows, cols, low, high, n))
+# rows = int(input("Number of rows:"))
+# cols = int(input("Number of columns:"))
+# low = int(input("Low value:"))
+# high = int(input("High value:"))
+matrix = [[randint(low, high) for i in range(cols)] for j in range(rows)]
+print_matrix_num(matrix)
+find_less(matrix, n)
+
+# # # # # TASK 9 # # # # #
+print("\n# # # # # TASK 9 # # # # #")
+
+from random import randint
+
+
+def generate_matrix_char(rows, cols):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = [char for char in alphabet]
+    matrix = [[alphabet[randint(0, 25)] for i in range(cols)] for j in range(rows)]
+    return matrix
+
+
+def print_matrix_char(matrix):
+    print("\n  ", end="")
+    for i in range(0, cols, 1):
+        print("{:4}".format(i), end="")
+    print("")
+    
+    for i in range(0, rows, 1):
+        print("{:2d}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("{:>4}".format(matrix[i][j]), end="")
+        print("")
+
+
+def count_frequency(matrix, c):
+    count = 0
+    for i in range(0, rows, 1):
+        for j in range(0, cols, 1):
+            if matrix[i][j] == c:
+                count += 1
+    print("\nEnter the character to search for: {}\nCharacter {} appears {} times in matrix.".format(c, c, count))
+    
+
+rows, cols, c = (5, 4, "c")
+# rows = int(input("Number of rows:"))
+# cols = int(input("Number of columns:"))
+matrix = generate_matrix_char(rows, cols)
+print_matrix_char(matrix)
+count_frequency(matrix, c)
+'''
+# # # # # TASK 10 # # # # #
+print("\n# # # # # TASK 10 # # # # #")
