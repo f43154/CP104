@@ -328,6 +328,85 @@ rows, cols, c = (5, 4, "c")
 matrix = generate_matrix_char(rows, cols)
 print_matrix_char(matrix)
 count_frequency(matrix, c)
-'''
+
 # # # # # TASK 10 # # # # #
 print("\n# # # # # TASK 10 # # # # #")
+
+
+def print_matrix_char(strings):
+    print("\n  ", end="")
+    for i in range(0, cols, 1):
+        print("{:4}".format(i), end="")
+    print("")
+    
+    for i in range(0, rows, 1):
+        print("{:2d}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("{:>4}".format(matrix[i][j]), end="")
+        print("")
+
+
+def find_word_horizontal(matrix, word):
+    position = ""
+    for i in range(0, rows, 1):
+        if matrix[i] == word:
+            position = i 
+    print("\nThe word to search for is: {}\n\nThe word is found in rows [{}]".format(word, position))
+    
+
+matrix = ["cat", "dog", "big"]
+rows = len(matrix)
+cols = len(matrix[0])
+print_matrix_char(matrix)
+word = "dog"
+find_word_horizontal(matrix, word)
+
+# # # # # TASK 11 # # # # #
+print("\n# # # # # TASK 11 # # # # #")
+
+
+def print_matrix_char(strings):
+    print("\n  ", end="")
+    for i in range(0, cols, 1):
+        print("{:4}".format(i), end="")
+    print("")
+    
+    for i in range(0, rows, 1):
+        print("{:2d}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("{:>4}".format(matrix[i][j]), end="")
+        print("")
+
+
+def find_word_vertical(matrix, word):
+    # Turn strings into a list where with all characters separated
+    new_matrix = []
+    for i in range(0, len(matrix), 1):
+        new_matrix += list(matrix[i])
+    
+    # Reassemble the list with the new words
+    column_list = []
+    word_reconstructed = []
+    i = 0
+    while i < (len(new_matrix) / len(matrix[0])):
+        word_reconstructed = new_matrix[i] + new_matrix[i + 3] + new_matrix[i + 6]
+        column_list.append(word_reconstructed)
+        i += 1
+    
+    # Search and return position
+    position = ""
+    for i in range(0, rows, 1):
+        if column_list[i] == word:
+            position = i 
+    print("\nThe word to search for is: {}\n\nThe word is found in rows [{}]".format(word, position))
+    
+
+matrix = ["cdb", "aoi", "tgg"]
+rows = len(matrix)
+cols = len(matrix[0])
+print_matrix_char(matrix)
+word = "big"
+find_word_vertical(matrix, word)
+'''
+# # # # # TASK 12 # # # # #
+print("\n# # # # # TASK 12 # # # # #")
