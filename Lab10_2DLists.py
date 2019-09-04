@@ -407,6 +407,66 @@ cols = len(matrix[0])
 print_matrix_char(matrix)
 word = "big"
 find_word_vertical(matrix, word)
-'''
+
 # # # # # TASK 12 # # # # #
 print("\n# # # # # TASK 12 # # # # #")
+
+
+def print_matrix_char(strings):
+    print("\n  ", end="")
+    for i in range(0, cols, 1):
+        print("{:4}".format(i), end="")
+    print("")
+    
+    for i in range(0, rows, 1):
+        print("{:2d}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("{:>4}".format(matrix[i][j]), end="")
+        print("")
+
+
+def find_word_diagonal(matrix, word):
+    # Turn strings into a list where with all characters separated
+    print()
+    new_matrix = []
+    for i in range(0, len(matrix), 1):
+        new_matrix += list(matrix[i])
+    
+    # Reassemble the list with the new words diagonally BOTTOM LEFT TO TOP RIGHT
+    bottom_left = []
+    left_reconstructed = new_matrix[6] + new_matrix[4] + new_matrix[2]
+    bottom_left.append(left_reconstructed)
+    bottom_left = list(bottom_left[0])
+    
+    # Reassemble the list with the new words diagonally TOP LEFT TO BOTTOM RIGHT
+    top_left = []
+    right_reconstructed = new_matrix[0] + new_matrix[4] + new_matrix[8]
+    top_left.append(right_reconstructed)
+    top_left = list(top_left[0])
+    
+    # Search and return true/false for diagonal
+    bottom_left_diagonal = 0
+    top_left_diagonal = 0
+    for i in range(0, 3, 1):
+        if top_left[i] == word[i]:
+            top_left_diagonal += 1
+        if bottom_left[i] == word[i]:
+            bottom_left_diagonal += 1
+            
+    if top_left_diagonal == 3:
+        print("The word '{}' is found on the diagonal (starting from top left).".format(word))
+    elif bottom_left_diagonal == 3:
+        print("The word '{}' is found on the diagonal (starting from bottom left).".format(word))
+    else:
+        print("The word '{}' is not found on the diagonal.".format(word))
+
+
+matrix = ["cat", "dog", "big"]
+rows = len(matrix)
+cols = len(matrix[0])
+print_matrix_char(matrix)
+word = "bot"
+find_word_diagonal(matrix, word)
+'''
+# # # # # TASK 13 # # # # #
+print("\n# # # # # TASK 13 # # # # #")
