@@ -470,3 +470,45 @@ find_word_diagonal(matrix, word)
 '''
 # # # # # TASK 13 # # # # #
 print("\n# # # # # TASK 13 # # # # #")
+
+from random import randint
+
+    
+def print_matrix_num(matrix):
+    print("")
+    print("  ", end="")
+    
+    for i in range(0, cols, 1):
+        print("  {:4.0f}".format(i), end="")
+    print("")
+    for i in range(0, rows, 1):
+        print(" {}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("  {:4.0f}".format(matrix[i][j]), end="")
+        print("")
+
+
+def scalar_multiply(matrix, num):
+    new_matrix = []
+    for i in range(0, len(matrix), 1):
+        for j in range(0, len(matrix[0]), 1):
+            new_num = matrix[i][j] * num
+            new_matrix.append(new_num)
+    print("new_matrix", new_matrix)
+    print("new_matrix[0]", new_matrix[3])
+    
+    print("")
+    print("  ", end="")
+    
+    new_matrix_print = []
+    for j in range(0, cols, 1):
+        for i in range(0, len(new_matrix), 1):
+            new_matrix_print.append(new_matrix[i])
+            print("new_matrix_print", new_matrix_print)
+
+
+rows, cols, low, high = (4, 3, -10, 10)
+matrix = [[randint(low, high) for i in range(cols)] for j in range(rows)]
+print_matrix_num(matrix)
+num = int(input("\nEnter number:"))
+scalar_multiply(matrix, num)
