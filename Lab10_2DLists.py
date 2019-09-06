@@ -7,12 +7,10 @@ Email: email@mylaurier.ca
 @author: Fani
 '''
 from cgitb import small
-'''
-# # # # # TASK 1 # # # # #
-print("\n# # # # # TASK 1 # # # # #")
-
 from random import randint
 from random import uniform
+# # # # # TASK 1 # # # # #
+print("\n# # # # # TASK 1 # # # # #")
 
 
 def generate_matrix_num(rows, cols, low, high, value_type):
@@ -34,7 +32,6 @@ generate_matrix_num(rows, cols, low, high, value_type)
 
 # # # # # TASK 2 # # # # #
 print("\n# # # # # TASK 2 # # # # #")
-from random import randint
 
 
 def generate_matrix_char(rows, cols):
@@ -51,9 +48,6 @@ generate_matrix_char(rows, cols)
 
 # # # # # TASK 3 # # # # #
 print("\n# # # # # TASK 3 # # # # #")
-
-from random import randint
-from random import uniform
 
 
 def generate_matrix_num(rows, cols, low, high, value_type):
@@ -103,7 +97,6 @@ print_matrix_num(generate_matrix_num(rows, cols, low, high, value_type), value_t
 
 # # # # # TASK 4 # # # # #
 print("\n# # # # # TASK 4 # # # # #")
-from random import randint
 
 
 def generate_matrix_char(rows, cols):
@@ -161,8 +154,6 @@ words_to_matrix(word_list)
 # # # # # TASK 6 # # # # #
 print("\n# # # # # TASK 6 # # # # #")
 
-from random import randint
-
     
 def print_matrix_num(matrix):
     print("  ", end="")
@@ -207,8 +198,6 @@ stats(matrix)
 # # # # # TASK 7 # # # # #
 print("\n# # # # # TASK 7 # # # # #")
 
-from random import randint
-
     
 def print_matrix_num(matrix):
     print("  ", end="")
@@ -252,8 +241,6 @@ stats(matrix)
 # # # # # TASK 8 # # # # #
 print("\n# # # # # TASK 8 # # # # #")
 
-from random import randint
-
     
 def print_matrix_num(matrix):
     print("  ", end="")
@@ -289,8 +276,6 @@ find_less(matrix, n)
 
 # # # # # TASK 9 # # # # #
 print("\n# # # # # TASK 9 # # # # #")
-
-from random import randint
 
 
 def generate_matrix_char(rows, cols):
@@ -467,11 +452,9 @@ cols = len(matrix[0])
 print_matrix_char(matrix)
 word = "bot"
 find_word_diagonal(matrix, word)
-'''
+
 # # # # # TASK 13 # # # # #
 print("\n# # # # # TASK 13 # # # # #")
-
-from random import randint
 
     
 def print_matrix_num(matrix):
@@ -489,26 +472,115 @@ def print_matrix_num(matrix):
 
 
 def scalar_multiply(matrix, num):
-    new_matrix = []
+    new_list = []
     for i in range(0, len(matrix), 1):
-        for j in range(0, len(matrix[0]), 1):
+        for j in range(0, len(matrix[0]), 1):            
             new_num = matrix[i][j] * num
-            new_matrix.append(new_num)
-    print("new_matrix", new_matrix)
-    print("new_matrix[0]", new_matrix[3])
+            new_list.append(new_num)
     
-    print("")
-    print("  ", end="")
-    
-    new_matrix_print = []
-    for j in range(0, cols, 1):
-        for i in range(0, len(new_matrix), 1):
-            new_matrix_print.append(new_matrix[i])
-            print("new_matrix_print", new_matrix_print)
+    # Turn list into a 2D array using a list comprehension
+    new_matrix = [new_list[i:i + cols] for i in range(0, len(new_list), cols)]   
+    return new_matrix
 
 
 rows, cols, low, high = (4, 3, -10, 10)
 matrix = [[randint(low, high) for i in range(cols)] for j in range(rows)]
 print_matrix_num(matrix)
 num = int(input("\nEnter number:"))
-scalar_multiply(matrix, num)
+print_matrix_num(scalar_multiply(matrix, num))
+
+# # # # # TASK 14 # # # # #
+print("\n# # # # # TASK 14 # # # # #")
+
+
+def print_matrix_num(matrix):
+    print("")
+    print("Original matrix:")
+    print("  ", end="")
+    
+    for i in range(0, cols, 1):
+        print("  {:4.0f}".format(i), end="")
+    print("")
+    for i in range(0, rows, 1):
+        print(" {}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("  {:4.0f}".format(matrix[i][j]), end="")
+        print("")
+
+
+def matrix_transpose(a):    
+    new_matrix = [[row[i] for row in matrix] for i in range(cols)]
+    print("")
+    print("Transposed matrix:")
+    print("  ", end="")
+    
+    for i in range(0, rows, 1):
+        print("  {:4.0f}".format(i), end="")
+    print("")
+    for i in range(0, cols, 1):
+        print(" {}".format(i), end="")
+        for j in range(0, rows, 1):
+            print("  {:4.0f}".format(new_matrix[i][j]), end="")
+        print("")
+
+        
+rows, cols, low, high = (4, 3, -10, 10)
+matrix = [[randint(low, high) for i in range(cols)] for j in range(rows)]
+print_matrix_num(matrix)
+
+# Turn 2D array back into list
+a = []
+for i in range(0, len(matrix), 1):
+    a += list(matrix[i])
+
+matrix_transpose(a)
+
+# # # # # TASK 15 # # # # #
+print("\n# # # # # TASK 15 # # # # #")
+
+
+def list_to_2darray(word_list):
+    rows = len(word_list)
+    cols = len(word_list[0])
+    char_list = []
+    for i in range(0, len(word_list), 1):
+        char_list.append([char for char in word_list[i]])
+    return char_list
+
+
+def print_2darray(word_list, char_list):
+    rows = len(word_list)
+    cols = len(word_list[0])
+    
+    print("  ", end="")
+    for i in range(0, cols, 1):
+        print("{:4}".format(i), end="")
+    print("")
+    
+    for i in range(0, rows, 1):
+        print("{:2d}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("{:>4}".format(char_list[i][j]), end="")
+        print("")    
+
+
+def matrix_equal(matrix1, matrix2):
+    total = len(matrix1) * len(matrix1[0]) 
+    counter = 0
+    for i in range(0, len(matrix1), 1):
+        for j in range(0, len(matrix1[0]), 1):
+            if matrix1[i][j] == matrix2[i][j]:
+                counter += 1
+    if counter == total:
+        return True
+    else:
+        return False
+
+
+print("First matrix:")
+word_list1 = ["cat", "dog", "big"]
+word_list2 = ["cat", "dog", "big"]
+print_2darray(word_list1, list_to_2darray(word_list1))
+print("\nSecond matrix:")
+print_2darray(word_list2, list_to_2darray(word_list2))
+print("\nEqual matrices:", matrix_equal(list_to_2darray(word_list1), list_to_2darray(word_list2)))
