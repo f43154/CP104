@@ -13,8 +13,6 @@ print("\n# # # # # TASK 1 # # # # #")
 
 def binary_search(values, key):
     my_list = list(values)
-    print("list(values) ", list(values))
-    print()
     
     while(len(my_list) > 1):  # Stop when my_list is just the key
         
@@ -42,7 +40,7 @@ def binary_search(values, key):
                 print("\nright > key so new my_list", my_list)
                 
             elif right == key and left < key:
-                print("found the earliest occurence of key at {}".format(int(len(my_list) / 2)))
+                print("FOUND THE EARLIEST OCCURRENCE OF KEY AT {}".format(int(len(my_list) / 2)))
                 my_list = [my_list[int(len(my_list) / 2)]]
                 print("\nright == key and left < key so new my_list", my_list)
             
@@ -50,6 +48,10 @@ def binary_search(values, key):
                 my_list = my_list[0:int((len(my_list) / 2) - 1)] 
                 # new list after doing all the ifs
                 print("\nleft == key so new my_list", my_list)
+            
+            elif right < key:
+                my_list = my_list[int(len(my_list) / 2):len(my_list)]
+                print("left < key so new my_list", my_list)
                 
         elif len(my_list) % 2 == 1:
             print("\nmy_list is odd lengthed: ", len(my_list))
@@ -69,26 +71,30 @@ def binary_search(values, key):
                 if right <= key:
                     print("list is not in order\nright {} > left {}".format(right, left))
                 
-            elif right > key:
-                my_list = my_list[int((len(my_list) / 2) + 1):int(len(my_list))]
-                # new list after doing all the ifs
-                print("\nright > key so new my_list", my_list)
-            
-            elif right == key and left < key:
-                print("found the earliest occurence of key at {}".format(int(len(my_list) / 2)))
-                my_list = [my_list[int((len(my_list) / 2) + 1)]]
-                print("\nright == key and left < key so new my_list", my_list)
-            
-            elif left == key:
+            elif left == key and right > key:
                 my_list = my_list[0:int((len(my_list) / 2))] 
                 # new list after doing all the ifs
                 print("\nleft == key so new my_list", my_list)
                 
+            elif right == key and left < key:
+                print("FOUND THE EARLIEST OCCURRENCE OF KEY AT {}".format(int(len(my_list) / 2)))
+                my_list = [my_list[int((len(my_list) / 2) + 1)]]
+                print("\nright == key and left < key so new my_list", my_list)
+                
+            elif right > key:
+                my_list = my_list[int((len(my_list) / 2) + 1):int(len(my_list))]
+                # new list after doing all the ifs
+                print("\nright > key so new my_list", my_list)
+             
+            elif right < key:
+                my_list = my_list[int(len(my_list) / 2):len(my_list)]
+                print("left < key so new my_list", my_list) 
+
     
 values = [0, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 10]
 # values = [2, 5, 5, 5, 5, 5, 5, 8]
 print("Search: {} ".format(values), end="")
-key = 2
+key = 5
 print("for", key)
 # key = int(input("for "))
 binary_search(values, key)
