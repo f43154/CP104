@@ -6,7 +6,8 @@ ID: 123456789
 Email: email@mylaurier.ca
 @author: Fani
 '''
-
+from Tools.scripts.objgraph import flat
+'''
 # # # # # TASK 1 # # # # #
 print("\n# # # # # TASK 1 # # # # #")
 
@@ -103,3 +104,22 @@ binary_search(values, key)
 
 # # # # # TASK 2 # # # # #
 print("\n# # # # # TASK 2 # # # # #")
+
+
+def flatten(values):
+    rows = len(values)
+    cols = len(values[0])
+    flattened = []    
+    for i in range(0, rows, 1):
+        for j in range(0, cols, 1):
+            # print("value[{}][{}] = {}".format(i, j, values[i][j]))
+            flattened.append(values[i][j])
+    print("flattened values:", flattened)
+
+    
+values = [[7.11, 6.07, 1.94], [9.35, 6.76, 5.66], [8.07, 7.3, 5.65], [3.84, 3.83, 8.46]]
+flatten(values)
+'''
+# # # # # TASK 3 # # # # #
+print("\n# # # # # TASK 3 # # # # #")
+
