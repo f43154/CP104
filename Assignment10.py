@@ -123,3 +123,25 @@ flatten(values)
 # # # # # TASK 3 # # # # #
 print("\n# # # # # TASK 3 # # # # #")
 
+
+def matrix_multiple(a, b):
+    c = []
+    a_and_b = 0      
+    for i in range(0, len(a), 1):
+        for l in range(0, len(a), 1):            
+            for j in range(0, len(b), 1):
+                a_and_b += int(a[i][j]) * int(b[j][l])
+                # print("a[{}][{}]: {},\tb[{}][{}]: {},\ta_and_b: {}".format(i, j, a[i][j], j, l, b[j][l], a_and_b))
+            # print()
+            c.append(a_and_b)    
+            a_and_b = 0          
+    print(c)  # prints correct c, just need to put it into a matrix
+
+
+# a = [[4, 5, 4], [5, 2, 2]]
+# b = [[5, 3], [0, 2], [1, 5]]
+a = [[4, 5], [5, 2], [4, 2]]
+b = [[5, 0, 1], [3, 2, 5]]
+rows = len(a)
+cols = len(a[0])  
+matrix_multiple(a, b)
