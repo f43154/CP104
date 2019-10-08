@@ -134,14 +134,53 @@ def matrix_multiple(a, b):
                 # print("a[{}][{}]: {},\tb[{}][{}]: {},\ta_and_b: {}".format(i, j, a[i][j], j, l, b[j][l], a_and_b))
             # print()
             c.append(a_and_b)    
-            a_and_b = 0          
-    print(c)  # prints correct c, just need to put it into a matrix
+            a_and_b = 0    
+    # print("{}\n".format(c))  # prints correct c, just need to put it into a matrix   
+    
+    new_list = []
+    d = []
+    p = 0
+    if len(a) == 2:
+        while p < len(c):
+            new_list = [c[p], c[p + 1]]
+            # print("c[{}] {} + c[{}]{} + c[{}]{}".format(i, c[i], i + 1, c[i + 1], i + 2, c[i + 2]))
+            d.append(new_list)
+            # print("new_list", new_list)
+            p += len(a)
+        # print("\nd = ", d)
+        return d
+    
+    elif len(a) == 3:
+        while p < len(c):
+            new_list = [c[p], c[p + 1], c[p + 2]]
+            # print("c[{}] {} + c[{}]{} + c[{}]{}".format(i, c[i], i + 1, c[i + 1], i + 2, c[i + 2]))
+            d.append(new_list)
+            # print("new_list", new_list)
+            p += len(a)
+        # print("\nd = ", d)
+        return d
+
+    
+def print_matrix(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    print("\n  ", end="")
+    for i in range(0, cols, 1):
+        print("{:4}".format(i), end="")
+    print("")
+    
+    for i in range(0, rows, 1):
+        print("{:2d}".format(i), end="")
+        for j in range(0, cols, 1):
+            print("{:>4}".format(matrix[i][j]), end="")
+        print("")
 
 
 # a = [[4, 5, 4], [5, 2, 2]]
 # b = [[5, 3], [0, 2], [1, 5]]
 a = [[4, 5], [5, 2], [4, 2]]
 b = [[5, 0, 1], [3, 2, 5]]
-rows = len(a)
-cols = len(a[0])  
-matrix_multiple(a, b)
+print_matrix(a)
+print_matrix(b)
+print_matrix(matrix_multiple(a, b))
+
